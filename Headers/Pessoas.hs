@@ -1,49 +1,46 @@
 import Foundation
 import Yesod
 import Data.Text
+import Data.Bool
 import Database.Persist.Postgresql
--- areq obrigatorio
--- aopt opcional e precisa de maybe
--- # interpolador de comandos haskell
--- @ interpolador de rotas
--- ^ 
--- $ comandos lógicos de front-end
--- _ inter
---https://ide.c9.io/romefeller/hask4
---https://ide.c9.io/romefeller/hask2
-formProf :: Form Pessoas
-formProf = renderDivs $ Pessoas
+
+formPess :: Form Pessoas
+formPess = renderDivs $ Pessoas
     <$> areq textField "Nome" Nothing
     <*> areq textField "CPF" Nothing
-    <*> areq textField "Salario" Nothing
+    <*> areq textField "Endereco" Nothing
+    <*> areq textField "Cidade" Nothing
+    <*> areq textField "Estado" Nothing
+    <*> areq textField "Telefone" Nothing
+    
 
-formProfCurso :: Form [CursoId]
-formProfCurso = renderDivs $ areq (multiSelectField cursosLista) FieldSettings{fsId=Just "hident6",
-                           fsLabel="Curso ",
+formPessObj :: Form [ObjetosId]
+formPessObj = renderDivs $ areq (multiSelectField cursosLista) FieldSettings{fsId=Just "hident6",
+                           fsLabel="Objeto ",
                            fsTooltip= Nothing,
                            fsName = (Just "F22"),
                            fsAttrs=[]} Nothing
             where
-                cursosLista = do
-                    cursos <- runDB $ selectList [] [Asc CursoNome]
-                    optionsPairs $ Prelude.map (\cur -> (cursoNome $ entityVal cur, entityKey cur)) cursos
+                objLista = do
+                    objetos <- runDB $ selectList [] [Asc ObjetosNome]
+                    optionsPairs $ Prelude.map (\cur -> (objetosNome $ entityVal cur, entityKey cur)) objetos
     
-getProfR :: Handler Html
-getProfR = do
-           (widget, enctype) <- generateFormPost formProf
-           (widget2, _) <- generateFormPost formProfCurso
+getPessR :: Handler Html
+getPessR = do
+           (widget, enctype) <- generateFormPost formPess
+           (widget2, _) <- generateFormPost formPessObj
            defaultLayout [whamlet|
-             <form method=post action=@{ProfR} enctype=#{enctype}>
+             <form method=post action=@{PessR} enctype=#{enctype}>
              
                  ^{widget}
                  ^{widget2}
                  <input type="submit" value="Cadastrar">
            |]
 
-postProfR :: Handler Html
-postProfR = do
-            ((result, _), _) <- runFormPost formProf
-            cursoid <- fromMaybe  (lookupPostParams "F22") :: Handler [CursoId]
+postPessR :: Handler Html
+postPessR = do
+            ((result, _), _) <- runFormPost formPess
+            cursoid <- fromMaybe  (lookupPostParams "F22") :: Handler [ObjetosId]
             case result of
                 FormSuccess prof -> do
                     pid <- runDB $ insert prof

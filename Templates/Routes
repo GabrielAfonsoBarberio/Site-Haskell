@@ -1,4 +1,7 @@
 /                        HomeR               GET
+/login                   LoginR              GET POST
+/perfil                  PerfilR             GET
+/logout                  LogoutR                 POST
 /objeto/cadastro         CursoR              GET POST    
 /objeto/listar           ListCursoR          GET
 /pessoa/cadastro         ProfR               GET POST

@@ -5,6 +5,7 @@
 module Foundation where
 
 import Yesod
+import Data.Bool
 import Data.Text
 import Database.Persist.Postgresql
     ( ConnectionPool, SqlBackend, runSqlPool)
@@ -12,30 +13,34 @@ import Database.Persist.Postgresql
 data App = App {connPool :: ConnectionPool }
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
+
 Objetos
-    objetoid
-    nome    Text
-    sigla   Text
+    objetosid        Text
+    nome             Text
+    sigla            Text
+    disponibilidade  Bool
 
 Pessoas
-    pessoaid    Text
-    nome        Text
-    endereço    Text
-    cidade      Text
-    estado      Text
-    telefone    Text
-    celular     Text
+    pessoasid       Text
+    nome            Text
+    endereco        Text
+    cidade          Text
+    estado          Text
+    telefone        Text
 
 Funcionarios
-    usuarioid   Text
-    nome        Text
-    email       Text
-    senha       Text
+    usuariosid   Text
+    nome         Text
+    email        Text
+    senha        Text
 
 Relatorio
-    pessoasid ProfessorId
-    objetoid CursoId
-    UniquePesObj pessoasid objetoid
+    pessoasid       PessoasId
+    objetosid       ObjetosId
+    usuariosid      UsuariosId
+    disponibilidade Bool
+    UniquePesObj    pessoasid objetoid usuariosid
+    
 |]
 
 mkYesodData "App" $(parseRoutesFile "routes")
