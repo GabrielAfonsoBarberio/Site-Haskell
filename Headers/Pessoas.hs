@@ -42,30 +42,36 @@ postPessR = do
             ((result, _), _) <- runFormPost formPess
             cursoid <- fromMaybe  (lookupPostParams "F22") :: Handler [ObjetosId]
             case result of
-                FormSuccess prof -> do
-                    pid <- runDB $ insert prof
-                    sequence $ Prelude.map (\x -> runDB $ insert (CursoProfessor pid x)) cursosid 
+                FormSuccess pess -> do
+                    pid <- runDB $ insert pess
+                    sequence $ Prelude.map (\x -> runDB $ insert (Relatorio pid x)) objetosid 
                     defaultLayout [whamlet|
-                        Professor(a) cadastrado(a) com sucesso #{fromSqlKey pid}!
+                        Pessoa(a) cadastrado(a) com sucesso #{fromSqlKey pid}!
                     |]
                 _ -> redirect HomeR
 
-getListProfR :: Handler Html
-getListProfR = do
-            profs <- runDB $ selectList [] [Asc ProfessorNome]
+getListPessR :: Handler Html
+getListPessR = do
+            pesoas <- runDB $ selectList [] [Asc PessoaNome]
             defaultLayout $ do
                 [whamlet|
                      <table>
                          <tr>
                              <td> id
                              <td> nome
-                             <td> rg
-                             <td> salario
+                             <td> cpf
+                             <td> endereco
+                             <td> cidade
+                             <td> estado
+                             <td> telefone
                          $forall Entity pid prof <- profs
                              <tr>
                                  <td> #{fromSqlKey pid}
-                                 <td> #{professorNome prof}
-                                 <td> #{professorRg prof}
-                                 <td> #{professorSalario prof}
+                                 <td> #{pessoasNome pess}
+                                 <td> #{pessoasCPF pess}
+                                 <td> #{pessoasEndereco pess}
+                                 <td> #{pessoasCidade pess}
+                                 <td> #{pessoasEstado pess}
+                                 <td> #{pessoasTelefone pess}
                          
                 |]

@@ -23,6 +23,7 @@ Objetos
 Pessoas
     pessoasid       Text
     nome            Text
+    cpf             Text
     endereco        Text
     cidade          Text
     estado          Text
@@ -32,7 +33,7 @@ Funcionarios
     usuariosid   Text
     nome         Text
     email        Text
-    senha        Text
+    password     Text
 
 Relatorio
     pessoasid       PessoasId
