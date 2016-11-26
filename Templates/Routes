@@ -1,0 +1,6 @@
+/                        HomeR               GET
+/objeto/cadastro         CursoR              GET POST    
+/objeto/listar           ListCursoR          GET
+/pessoa/cadastro         ProfR               GET POST
+/pessoa/listar           ListProfR           GET
+/static                  StaticR             Static getStatic
