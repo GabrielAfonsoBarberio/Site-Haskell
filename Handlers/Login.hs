@@ -25,8 +25,8 @@ postLoginR = do
             ((result, _), _) <- runFormPost formLogin
             case result of
                 FormSuccess (email, password) -> do
-                   cara <- runDB $ selectFirst [PessoaEmail ==. email,
-                                                PessoaSenha ==. password] []
+                   cara <- runDB $ selectFirst [FuncionariosEmail ==. email,
+                                                FuncionariosSenha ==. password] []
                    case cara of
                        Just (Entity pid pessoasid) -> do
                            setSession "_ID" (pack $ show $ fromSqlKey pid)

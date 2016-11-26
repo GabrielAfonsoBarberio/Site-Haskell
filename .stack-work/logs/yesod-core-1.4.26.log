@@ -1,0 +1,122 @@
+Configuring yesod-core-1.4.26...
+Building yesod-core-1.4.26...
+Preprocessing library yesod-core-1.4.26...
+[ 1 of 31] Compiling Yesod.Routes.TH.Types ( Yesod/Routes/TH/Types.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Routes/TH/Types.o )
+[ 2 of 31] Compiling Yesod.Routes.TH.Dispatch ( Yesod/Routes/TH/Dispatch.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Routes/TH/Dispatch.o )
+[ 3 of 31] Compiling Yesod.Routes.Overlap ( Yesod/Routes/Overlap.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Routes/Overlap.o )
+[ 4 of 31] Compiling Yesod.Core.TypeCache ( Yesod/Core/TypeCache.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/TypeCache.o )
+[ 5 of 31] Compiling Yesod.Routes.Class ( Yesod/Routes/Class.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Routes/Class.o )
+[ 6 of 31] Compiling Yesod.Routes.TH.RenderRoute ( Yesod/Routes/TH/RenderRoute.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Routes/TH/RenderRoute.o )
+[ 7 of 31] Compiling Yesod.Routes.TH.ParseRoute ( Yesod/Routes/TH/ParseRoute.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Routes/TH/ParseRoute.o )
+[ 8 of 31] Compiling Yesod.Routes.TH.RouteAttrs ( Yesod/Routes/TH/RouteAttrs.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Routes/TH/RouteAttrs.o )
+[ 9 of 31] Compiling Yesod.Routes.TH  ( Yesod/Routes/TH.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Routes/TH.o )
+[10 of 31] Compiling Yesod.Routes.Parse ( Yesod/Routes/Parse.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Routes/Parse.o )
+[11 of 31] Compiling Paths_yesod_core ( .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/autogen/Paths_yesod_core.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Paths_yesod_core.o )
+[12 of 31] Compiling Yesod.Core.Internal.Util ( Yesod/Core/Internal/Util.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Internal/Util.o )
+[13 of 31] Compiling Yesod.Core.Types ( Yesod/Core/Types.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Types.o )
+
+Yesod/Core/Types.hs:465:10: warning: [-Wredundant-constraints]
+    • Redundant constraint: Applicative m
+    • In the instance declaration for ‘MonadResource (WidgetT site m)’
+[14 of 31] Compiling Yesod.Core.Class.Handler ( Yesod/Core/Class/Handler.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Class/Handler.o )
+
+Yesod/Core/Class/Handler.hs:26:1: warning: [-Wdeprecations]
+    Module ‘Control.Monad.Trans.Error’ is deprecated:
+      Use Control.Monad.Trans.Except instead
+
+Yesod/Core/Class/Handler.hs:60:11: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Yesod/Core/Class/Handler.hs:60:54: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Yesod/Core/Class/Handler.hs:60:91: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Yesod/Core/Class/Handler.hs:86:11: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Yesod/Core/Class/Handler.hs:86:52: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+[15 of 31] Compiling Yesod.Core.Internal.Request ( Yesod/Core/Internal/Request.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Internal/Request.o )
+[16 of 31] Compiling Yesod.Core.Internal.Session ( Yesod/Core/Internal/Session.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Internal/Session.o )
+[17 of 31] Compiling Yesod.Core.Content ( Yesod/Core/Content.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Content.o )
+[18 of 31] Compiling Yesod.Core.Handler ( Yesod/Core/Handler.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Handler.o )
+
+Yesod/Core/Handler.hs:1122:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: MonadResource m
+    • In the type signature for:
+           lookupFile :: (MonadHandler m, MonadResource m) =>
+                         Text -> m (Maybe FileInfo)
+
+Yesod/Core/Handler.hs:1128:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: MonadResource m
+    • In the type signature for:
+           lookupFiles :: (MonadHandler m, MonadResource m) =>
+                          Text -> m [FileInfo]
+[19 of 31] Compiling Yesod.Core.Widget ( Yesod/Core/Widget.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Widget.o )
+[20 of 31] Compiling Yesod.Core.Class.Breadcrumbs ( Yesod/Core/Class/Breadcrumbs.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Class/Breadcrumbs.o )
+[21 of 31] Compiling Yesod.Core.Class.Yesod ( Yesod/Core/Class/Yesod.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Class/Yesod.o )
+
+Yesod/Core/Class/Yesod.hs:427:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Yesod site
+    • In the type signature for:
+           sslOnlyMiddleware :: Yesod site =>
+                                Int -> HandlerT site IO res -> HandlerT site IO res
+
+Yesod/Core/Class/Yesod.hs:481:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Yesod site
+    • In the type signature for:
+           csrfCheckMiddleware :: Yesod site =>
+                                  HandlerT site IO res
+                                  -> HandlerT site IO Bool
+                                  -> CI S8.ByteString
+                                  -> Text
+                                  -> HandlerT site IO res
+
+Yesod/Core/Class/Yesod.hs:497:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Yesod site
+    • In the type signature for:
+           defaultCsrfSetCookieMiddleware :: Yesod site =>
+                                             HandlerT site IO res -> HandlerT site IO res
+
+Yesod/Core/Class/Yesod.hs:507:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Yesod site
+    • In the type signature for:
+           csrfSetCookieMiddleware :: Yesod site =>
+                                      HandlerT site IO res -> SetCookie -> HandlerT site IO res
+
+Yesod/Core/Class/Yesod.hs:531:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Eq (Route site)
+    • In the type signature for:
+           widgetToPageContent :: (Eq (Route site), Yesod site) =>
+                                  WidgetT site IO () -> HandlerT site IO (PageContent (Route site))
+[22 of 31] Compiling Yesod.Core.Json  ( Yesod/Core/Json.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Json.o )
+
+Yesod/Core/Json.hs:172:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: J.ToJSON a
+    • In the type signature for:
+           jsonOrRedirect' :: (MonadHandler m, J.ToJSON a) =>
+                              (a -> b) -> Route (HandlerSite m) -> a -> m b
+[23 of 31] Compiling Yesod.Core.Class.Dispatch ( Yesod/Core/Class/Dispatch.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Class/Dispatch.o )
+[24 of 31] Compiling Yesod.Core.Internal.Response ( Yesod/Core/Internal/Response.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Internal/Response.o )
+[25 of 31] Compiling Yesod.Core.Internal.Run ( Yesod/Core/Internal/Run.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Internal/Run.o )
+[26 of 31] Compiling Yesod.Core.Internal.TH ( Yesod/Core/Internal/TH.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Internal/TH.o )
+[27 of 31] Compiling Yesod.Core.Dispatch ( Yesod/Core/Dispatch.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Dispatch.o )
+[28 of 31] Compiling Yesod.Core.Unsafe ( Yesod/Core/Unsafe.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Unsafe.o )
+[29 of 31] Compiling Yesod.Core.Internal.LiteApp ( Yesod/Core/Internal/LiteApp.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Internal/LiteApp.o )
+[30 of 31] Compiling Yesod.Core.Internal ( Yesod/Core/Internal.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core/Internal.o )
+[31 of 31] Compiling Yesod.Core       ( Yesod/Core.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Core.o )
+Installing library in
+/home/ubuntu/.stack/snapshots/x86_64-linux/lts-7.10/8.0.1/lib/x86_64-linux-ghc-8.0.1/yesod-core-1.4.26-Bs4t4O0dhoG8RcNqRS5IQ1
+Registering yesod-core-1.4.26...

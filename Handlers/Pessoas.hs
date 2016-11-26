@@ -1,8 +1,16 @@
-import Foundation
+{-# LANGUAGE OverloadedStrings, QuasiQuotes,
+             TemplateHaskell #-}
+             
+module Handlers.Pessoas where
 import Yesod
+import Foundation
+import Control.Monad.Logger (runStdoutLoggingT)
+import Control.Applicative
 import Data.Text
-import Data.Bool
+import Text.Lucius
 import Database.Persist.Postgresql
+import Database.Persist
+
 
 formPess :: Form Pessoas
 formPess = renderDivs $ Pessoas
@@ -14,21 +22,21 @@ formPess = renderDivs $ Pessoas
     <*> areq textField "Telefone" Nothing
     
 
-formPessObj :: Form [ObjetosId]
-formPessObj = renderDivs $ areq (multiSelectField cursosLista) FieldSettings{fsId=Just "hident6",
-                           fsLabel="Objeto ",
+formPessInv :: Form [InventarioId]
+formPessInv = renderDivs $ areq (multiSelectField cursosLista) FieldSettings{fsId=Just "hident6",
+                           fsLabel="Inventario ",
                            fsTooltip= Nothing,
                            fsName = (Just "F22"),
                            fsAttrs=[]} Nothing
             where
-                objLista = do
-                    objetos <- runDB $ selectList [] [Asc ObjetosNome]
-                    optionsPairs $ Prelude.map (\cur -> (objetosNome $ entityVal cur, entityKey cur)) objetos
+                invLista = do
+                    inventario <- runDB $ selectList [] [Asc InventarioNome]
+                    optionsPairs $ Prelude.map (\cur -> (objetosNome $ entityVal cur, entityKey cur)) inventario
     
 getPessR :: Handler Html
 getPessR = do
            (widget, enctype) <- generateFormPost formPess
-           (widget2, _) <- generateFormPost formPessObj
+           (widget2, _) <- generateFormPost formPessInv
            defaultLayout [whamlet|
              <form method=post action=@{PessR} enctype=#{enctype}>
              
@@ -40,11 +48,11 @@ getPessR = do
 postPessR :: Handler Html
 postPessR = do
             ((result, _), _) <- runFormPost formPess
-            cursoid <- fromMaybe  (lookupPostParams "F22") :: Handler [ObjetosId]
+            cursoid <- fromMaybe  (lookupPostParams "F22") :: Handler [InventarioId]
             case result of
                 FormSuccess pess -> do
                     pid <- runDB $ insert pess
-                    sequence $ Prelude.map (\x -> runDB $ insert (Relatorio pid x)) objetosid 
+                    sequence $ Prelude.map (\x -> runDB $ insert (Relatorio pid x)) inventarioid 
                     defaultLayout [whamlet|
                         Pessoa(a) cadastrado(a) com sucesso #{fromSqlKey pid}!
                     |]

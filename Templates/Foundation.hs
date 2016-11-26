@@ -14,10 +14,10 @@ data App = App {connPool :: ConnectionPool }
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 
-Objetos
-    objetosid        Text
+Inventario
+    inventarioid     Text
     nome             Text
-    sigla            Text
+    tipo             Text
     disponibilidade  Bool
 
 Pessoas
@@ -37,10 +37,11 @@ Funcionarios
 
 Relatorio
     pessoasid       PessoasId
-    objetosid       ObjetosId
+    inventarioid    InventarioId
     usuariosid      UsuariosId
     disponibilidade Bool
-    UniquePesObj    pessoasid objetoid usuariosid
+    UniquePesInv    pessoasid objetoid usuariosid
+    deriving Show
     
 |]
 
