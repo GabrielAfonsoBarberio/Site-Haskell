@@ -12,8 +12,8 @@ import Database.Persist.Postgresql
 import Database.Persist
 
 
-formPess :: Form Pessoas
-formPess = renderDivs $ Pessoas
+formPess :: Form Pessoa
+formPess = renderDivs $ Pessoa
     <$> areq textField "Nome" Nothing
     <*> areq textField "CPF" Nothing
     <*> areq textField "Endereco" Nothing
@@ -21,34 +21,19 @@ formPess = renderDivs $ Pessoas
     <*> areq textField "Estado" Nothing
     <*> areq textField "Telefone" Nothing
     
-
-formPessInv :: Form [InventarioId]
-formPessInv = renderDivs $ areq (multiSelectField cursosLista) FieldSettings{fsId=Just "hident6",
-                           fsLabel="Inventario ",
-                           fsTooltip= Nothing,
-                           fsName = (Just "F22"),
-                           fsAttrs=[]} Nothing
-            where
-                invLista = do
-                    inventario <- runDB $ selectList [] [Asc InventarioNome]
-                    optionsPairs $ Prelude.map (\cur -> (objetosNome $ entityVal cur, entityKey cur)) inventario
-    
 getPessR :: Handler Html
 getPessR = do
            (widget, enctype) <- generateFormPost formPess
-           (widget2, _) <- generateFormPost formPessInv
            defaultLayout [whamlet|
              <form method=post action=@{PessR} enctype=#{enctype}>
-             
                  ^{widget}
-                 ^{widget2}
                  <input type="submit" value="Cadastrar">
            |]
 
 postPessR :: Handler Html
 postPessR = do
             ((result, _), _) <- runFormPost formPess
-            cursoid <- fromMaybe  (lookupPostParams "F22") :: Handler [InventarioId]
+            pessoaid <- fromMaybe  (lookupPostParams "F22") :: Handler [InventarioId]
             case result of
                 FormSuccess pess -> do
                     pid <- runDB $ insert pess
@@ -60,7 +45,7 @@ postPessR = do
 
 getListPessR :: Handler Html
 getListPessR = do
-            pesoas <- runDB $ selectList [] [Asc PessoaNome]
+            pessoa <- runDB $ selectList [] [Asc PessoaNome]
             defaultLayout $ do
                 [whamlet|
                      <table>
@@ -72,14 +57,14 @@ getListPessR = do
                              <td> cidade
                              <td> estado
                              <td> telefone
-                         $forall Entity pid prof <- profs
+                         $forall Entity pid pess <- pess
                              <tr>
                                  <td> #{fromSqlKey pid}
-                                 <td> #{pessoasNome pess}
-                                 <td> #{pessoasCPF pess}
-                                 <td> #{pessoasEndereco pess}
-                                 <td> #{pessoasCidade pess}
-                                 <td> #{pessoasEstado pess}
-                                 <td> #{pessoasTelefone pess}
+                                 <td> #{pessoaNome pess}
+                                 <td> #{pessoaCPF pess}
+                                 <td> #{pessoaEndereco pess}
+                                 <td> #{pessoaCidade pess}
+                                 <td> #{pessoaEstado pess}
+                                 <td> #{pessoaTelefone pess}
                          
                 |]

@@ -1,7 +1,7 @@
 {-# LANGUAGE OverloadedStrings, QuasiQuotes,
              TemplateHaskell #-}
+             
 module Handlers.Inventario where
-
 import Yesod
 import Foundation
 import Control.Monad.Logger (runStdoutLoggingT)
@@ -33,9 +33,23 @@ postInvR = do
                 FormSuccess inv -> do
                     pid <- runDB $ insert inv
                     defaultLayout [whamlet|
-                        Curso cadastrado com sucesso #{fromSqlKey pid}!
+                        Item cadastrado com sucesso #{fromSqlKey pid}!
                     |]
                 _ -> redirect HomeR
+
+postInvR :: Handler Html
+postCadastroR = do
+                ((result, _), _) <- runFormPost formPessoa
+                case result of
+                    FormSuccess pessoa -> do
+                       unicoCodigo <- runDB $ getBy $ UniqueEmail (pessoaEmail inventario)
+                       case unicoEmail of
+                           Just _ -> redirect CadastroR
+                           Nothing -> do 
+                              pid <- runDB $ insert pessoa 
+                              redirect (PessoaR pid)
+                    _ -> redirect CadastroR
+
 
 getListInvR :: Handler Html
 getListInvR = undefined

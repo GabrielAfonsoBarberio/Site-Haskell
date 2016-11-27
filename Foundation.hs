@@ -18,10 +18,10 @@ Inventario
     inventarioid     Text
     nome             Text
     tipo             Text
-    disponibilidade  Bool
+    disponibilidade  Int
 
-Pessoas
-    pessoasid       Text
+Pessoa
+    pessoaid        Text
     nome            Text
     cpf             Text
     endereco        Text
@@ -30,17 +30,17 @@ Pessoas
     telefone        Text
 
 Funcionarios
-    usuariosid   Text
+    usuarioid    Text
     nome         Text
     email        Text
     password     Text
 
 Relatorio
-    pessoasid       PessoasId
+    pessoaid        PessoaId
     inventarioid    InventarioId
-    usuariosid      UsuariosId
-    disponibilidade Bool
-    UniquePesInv    pessoasid objetoid usuariosid
+    usuarioid       UsuarioId
+    disponibilidade Int
+    UniquePesInv    pessoaid inventarioid usuarioid
     deriving Show
     
 |]
