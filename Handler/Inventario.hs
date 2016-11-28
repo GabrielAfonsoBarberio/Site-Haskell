@@ -12,11 +12,11 @@ formInv :: Form Inventario
 formInv = renderDivs $ Inventario
     <$> areq textField "Nome" Nothing
     <*> areq textField "Tipo" Nothing
-    <*> areq textField "Disponivel" Nothing
+    <*> areq intField "Disponivel" Nothing
 
 getInvR :: Handler Html
 getInvR = do
-           (widget, enctype) <- generateFormPost formCurso
+           (widget, enctype) <- generateFormPost formInv
            defaultLayout [whamlet|
              <form method=post action=@{InvR} enctype=#{enctype}>
                  ^{widget}
@@ -36,7 +36,7 @@ postInvR = do
 
 getListInvR :: Handler Html
 getListInvR = do
-            item <- runDB $ selectList [] [Asc ClienteNome]
+            item <- runDB $ selectList [] [Asc InventarioNome]
             defaultLayout $ do
                 [whamlet|
                      <table>

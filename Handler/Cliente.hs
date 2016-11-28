@@ -19,7 +19,7 @@ formCliente = renderDivs $ Cliente
 
 getClienteR :: Handler Html
 getClienteR = do
-    (widget,enctype) <- generateFormPost formPassageiro
+    (widget,enctype) <- generateFormPost formCliente
     defaultLayout $ do
         [whamlet|
             <form action=@{ClienteR} method=post enctype=#{enctype}>
@@ -55,11 +55,11 @@ getListClienteR = do
                          $forall Entity pid pess <- pess
                              <tr>
                                  <td> #{fromSqlKey pid}
-                                 <td> #{pessoaNome pess}
-                                 <td> #{pessoaCPF pess}
-                                 <td> #{pessoaEndereco pess}
-                                 <td> #{pessoaCidade pess}
-                                 <td> #{pessoaEstado pess}
-                                 <td> #{pessoaTelefone pess}
+                                 <td> #{clienteNome pess}
+                                 <td> #{clienteCpf pess}
+                                 <td> #{clienteEndereco pess}
+                                 <td> #{clienteCidade pess}
+                                 <td> #{clienteEstado pess}
+                                 <td> #{clienteTelefone pess}
                          
                 |]

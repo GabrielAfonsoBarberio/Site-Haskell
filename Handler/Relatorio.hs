@@ -11,11 +11,7 @@ import Data.Monoid
 
 formRelatorio :: Form [RelatorioId]
 formRelatorio = renderDivs $ areq (multiSelectField relatorioLista) "Emprestimos" Nothing
-              where
-                relatorioLista = do
-                    relatorio <- runDB $ selectList [] [Asc RelatorioId]
-                    optionsPairs $ Prelude.map (\v -> (mconcat ["Relatorio Num: ", relatid $ entityVal v, "  ", pessnome $ entityVal v, " - ", pack $ show $ itemnome $ entityVal v, " - ", pack $ show $ vooEmbarque $ entityVal v], entityKey v)) relatorio
-
+              
 
 getRelatorioR :: Handler Html
 getRelatorioR = do
@@ -36,7 +32,7 @@ postRelatorioR = do
                 case userId of
                     Nothing -> redirect HomeR
                     Just userStr -> do
-                        pid <- (return $ read $ unpack userStr) :: Handler UsuarioId
+                        pid <- (return $ read $ unpack userStr) :: Handler FuncionarioId
                         sequence $ fmap (\vid -> runDB $ insert $ RelatorioId pid vid) relatorio
                         defaultLayout [whamlet| <h1> Emprestimo #{fromSqlKey pid} criado com sucesso! |]
             _ -> redirect HomeR         

@@ -5,12 +5,13 @@
 module Foundation where
 
 import Yesod
+import Yesod.Static
 import Data.Bool
 import Data.Text
 import Database.Persist.Postgresql
     ( ConnectionPool, SqlBackend, runSqlPool)
 
-data App = App {connPool :: ConnectionPool }
+data App = App {getStatic :: Static, connPool :: ConnectionPool }
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 
@@ -32,10 +33,11 @@ Funcionario
     posicao      Text
     email        Text
     senha        Text
+    UniqueEmail  email
 
 Relatorio
     clienteid       ClienteId
-    itemid          ItemId
+    itemid          InventarioId
     funcionarioid   FuncionarioId
     concluido       Int
     UniqueRelato    clienteid itemid funcionarioid

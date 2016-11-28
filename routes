@@ -1,10 +1,10 @@
 /                        HomeR               GET
 /login                   LoginR              GET POST
-/perfil/#PessoaId        PerfilR             GET
+/perfil/#FuncionarioId   PerfilR             GET
 /logout                  LogoutR                 POST
 /inventario/cadastro     InvR                GET POST    
 /inventario/listar       ListInvR            GET
-/cliente/cadastro        ClienteR               GET POST
-/cliente/listar          ListClienteR           GET
+/cliente/cadastro        ClienteR            GET POST
+/cliente/listar          ListClienteR        GET
 /relatorio               RelatorioR          GET POST
 /static                  StaticR             Static getStatic

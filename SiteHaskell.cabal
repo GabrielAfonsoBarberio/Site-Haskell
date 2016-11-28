@@ -2,7 +2,7 @@ name:               SiteHaskell
 version:            0.0.0
 cabal-version:      >= 1.8
 build-type:         Simple
-extra-source-files: Routes
+extra-source-files: routes
 
 executable          site
   main-is:          Main.hs
@@ -19,6 +19,7 @@ executable          site
   build-depends:  base
                 , yesod
                 , yesod-core
+                , yesod-static
                 , text                          
                 , persistent                    
                 , persistent-postgresql

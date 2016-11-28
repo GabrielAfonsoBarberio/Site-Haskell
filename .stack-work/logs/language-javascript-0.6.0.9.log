@@ -1,0 +1,44 @@
+Configuring language-javascript-0.6.0.9...
+Building language-javascript-0.6.0.9...
+Preprocessing library language-javascript-0.6.0.9...
+unused rules: 3
+shift/reduce conflicts:  138
+reduce/reduce conflicts: 218
+[ 1 of 13] Compiling Language.JavaScript.Parser.StringEscape ( src/Language/JavaScript/Parser/StringEscape.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Language/JavaScript/Parser/StringEscape.o )
+[ 2 of 13] Compiling Language.JavaScript.Parser.SrcLocation ( src/Language/JavaScript/Parser/SrcLocation.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Language/JavaScript/Parser/SrcLocation.o )
+[ 3 of 13] Compiling Language.JavaScript.Parser.Token ( src/Language/JavaScript/Parser/Token.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Language/JavaScript/Parser/Token.o )
+[ 4 of 13] Compiling Language.JavaScript.Parser.ParserMonad ( src/Language/JavaScript/Parser/ParserMonad.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Language/JavaScript/Parser/ParserMonad.o )
+[ 5 of 13] Compiling Language.JavaScript.Parser.LexerUtils ( src/Language/JavaScript/Parser/LexerUtils.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Language/JavaScript/Parser/LexerUtils.o )
+[ 6 of 13] Compiling Language.JavaScript.Parser.Lexer ( .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Language/JavaScript/Parser/Lexer.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Language/JavaScript/Parser/Lexer.o )
+
+src/Language/JavaScript/Parser/Lexer.x:586:19: warning: [-Wunused-matches]
+    Defined but not used: ‘ap’
+
+templates/wrappers.hs:9:1: warning: [-Wunused-imports]
+    The qualified import of ‘Control.Monad’ is redundant
+      except perhaps to import instances from ‘Control.Monad’
+    To import instances alone, use: import Control.Monad()
+
+templates/wrappers.hs:220:19: warning: [-Wname-shadowing]
+    This binding for ‘s’ shadows the existing binding
+      bound at templates/wrappers.hs:219:12
+[ 7 of 13] Compiling Language.JavaScript.Parser.ParseError ( src/Language/JavaScript/Parser/ParseError.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Language/JavaScript/Parser/ParseError.o )
+
+src/Language/JavaScript/Parser/ParseError.hs:34:5: warning: [-Wunused-top-binds]
+    Defined but not used: ‘noMsg’
+
+src/Language/JavaScript/Parser/ParseError.hs:37:5: warning: [-Wunused-top-binds]
+    Defined but not used: ‘strMsg’
+[ 8 of 13] Compiling Language.JavaScript.Parser.AST ( src/Language/JavaScript/Parser/AST.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Language/JavaScript/Parser/AST.o )
+[ 9 of 13] Compiling Language.JavaScript.Pretty.Printer ( src/Language/JavaScript/Pretty/Printer.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Language/JavaScript/Pretty/Printer.o )
+
+src/Language/JavaScript/Pretty/Printer.hs:101:5: warning: [-Wincomplete-patterns]
+    Pattern match(es) are non-exhaustive
+    In an equation for ‘|>’: Patterns not matched: _ JSAnnotSpace
+[10 of 13] Compiling Language.JavaScript.Parser.Grammar5 ( .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Language/JavaScript/Parser/Grammar5.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Language/JavaScript/Parser/Grammar5.o )
+[11 of 13] Compiling Language.JavaScript.Parser.Parser ( src/Language/JavaScript/Parser/Parser.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Language/JavaScript/Parser/Parser.o )
+[12 of 13] Compiling Language.JavaScript.Process.Minify ( src/Language/JavaScript/Process/Minify.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Language/JavaScript/Process/Minify.o )
+[13 of 13] Compiling Language.JavaScript.Parser ( src/Language/JavaScript/Parser.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Language/JavaScript/Parser.o )
+Installing library in
+/home/ubuntu/.stack/snapshots/x86_64-linux/lts-7.10/8.0.1/lib/x86_64-linux-ghc-8.0.1/language-javascript-0.6.0.9-44rcHlsiVTfHHEmBCZnM8s
+Registering language-javascript-0.6.0.9...

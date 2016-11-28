@@ -63,6 +63,20 @@
   (major1) == 1 && (major2) <  4 || \
   (major1) == 1 && (major2) == 4 && (minor) <= 26)
 
+/* package yesod-static-1.5.1.1 */
+#define VERSION_yesod_static "1.5.1.1"
+#define MIN_VERSION_yesod_static(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  5 || \
+  (major1) == 1 && (major2) == 5 && (minor) <= 1)
+
+/* tool alex-3.1.7 */
+#define TOOL_VERSION_alex "3.1.7"
+#define MIN_TOOL_VERSION_alex(major1,major2,minor) (\
+  (major1) <  3 || \
+  (major1) == 3 && (major2) <  1 || \
+  (major1) == 3 && (major2) == 1 && (minor) <= 7)
+
 /* tool gcc-4.8 */
 #define TOOL_VERSION_gcc "4.8"
 #define MIN_TOOL_VERSION_gcc(major1,major2,minor) (\
@@ -90,6 +104,13 @@
   (major1) <  2 || \
   (major1) == 2 && (major2) <  17 || \
   (major1) == 2 && (major2) == 17 && (minor) <= 2)
+
+/* tool happy-1.19.5 */
+#define TOOL_VERSION_happy "1.19.5"
+#define MIN_TOOL_VERSION_happy(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  19 || \
+  (major1) == 1 && (major2) == 19 && (minor) <= 5)
 
 /* tool hpc-0.67 */
 #define TOOL_VERSION_hpc "0.67"

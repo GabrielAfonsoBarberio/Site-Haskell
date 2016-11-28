@@ -15,4 +15,5 @@ connStr = "dbname=d149c6o4rvq6s5 host=ec2-107-22-238-96.compute-1.amazonaws.com 
 main::IO()
 main = runStdoutLoggingT $ withPostgresqlPool connStr 10 $ \pool -> liftIO $ do 
        runSqlPersistMPool (runMigration migrateAll) pool 
+       t@(Static settings) <- static "static"
        warp 8080 (App pool)

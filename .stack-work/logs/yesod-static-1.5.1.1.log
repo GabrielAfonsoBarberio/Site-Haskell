@@ -1,0 +1,38 @@
+Configuring yesod-static-1.5.1.1...
+Building yesod-static-1.5.1.1...
+Preprocessing library yesod-static-1.5.1.1...
+[1 of 7] Compiling Yesod.EmbeddedStatic.Types ( Yesod/EmbeddedStatic/Types.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/EmbeddedStatic/Types.o )
+[2 of 7] Compiling Yesod.EmbeddedStatic.Generators ( Yesod/EmbeddedStatic/Generators.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/EmbeddedStatic/Generators.o )
+
+Yesod/EmbeddedStatic/Generators.hs:36:1: warning: [-Wunused-imports]
+    The import of ‘Control.Monad.Trans.Resource’ is redundant
+      except perhaps to import instances from ‘Control.Monad.Trans.Resource’
+    To import instances alone, use: import Control.Monad.Trans.Resource()
+[3 of 7] Compiling Yesod.Static     ( Yesod/Static.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/Static.o )
+
+Yesod/Static.hs:352:9: warning: [-Wunused-matches]
+    Defined but not used: ‘pack'’
+
+Yesod/Static.hs:509:1: warning: [-Wunused-top-binds]
+    Defined but not used: ‘errorIntro’
+[4 of 7] Compiling Yesod.EmbeddedStatic.Internal ( Yesod/EmbeddedStatic/Internal.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/EmbeddedStatic/Internal.o )
+
+Yesod/EmbeddedStatic/Internal.hs:143:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Yesod site
+    • In the type signature for:
+           staticContentHelper :: Yesod site =>
+                                  (site -> EmbeddedStatic)
+                                  -> (Route EmbeddedStatic -> Route site)
+                                  -> (BL.ByteString -> Either a BL.ByteString)
+                                  -> AddStaticContent site
+[5 of 7] Compiling Yesod.EmbeddedStatic ( Yesod/EmbeddedStatic.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/EmbeddedStatic.o )
+
+Yesod/EmbeddedStatic.hs:85:10: warning: [-Wredundant-constraints]
+    • Redundant constraint: Yesod master
+    • In the instance declaration for
+        ‘YesodSubDispatch EmbeddedStatic (HandlerT master IO)’
+[6 of 7] Compiling Yesod.EmbeddedStatic.Css.Util ( Yesod/EmbeddedStatic/Css/Util.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/EmbeddedStatic/Css/Util.o )
+[7 of 7] Compiling Yesod.EmbeddedStatic.Css.AbsoluteUrl ( Yesod/EmbeddedStatic/Css/AbsoluteUrl.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Yesod/EmbeddedStatic/Css/AbsoluteUrl.o )
+Installing library in
+/home/ubuntu/.stack/snapshots/x86_64-linux/lts-7.10/8.0.1/lib/x86_64-linux-ghc-8.0.1/yesod-static-1.5.1.1-3OXXDcQnEWB2nHnar7fIdk
+Registering yesod-static-1.5.1.1...
