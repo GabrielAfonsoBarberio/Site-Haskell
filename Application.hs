@@ -7,9 +7,11 @@ module Application where
 
 import Foundation
 import Yesod
-import Handlers.Inventario
-import Handlers.Pessoas
-import Handlers.Login
+import Handler.Inventario
+import Handler.Cliente
+import Handler.Login
+import Handler.Relatorio
+import Handler.Funcionario
 
 -- AQUI MORAM OS HANDLERS
 -- import Add
@@ -24,45 +26,22 @@ mkYesodDispatch "App" resourcesApp
 
 getHomeR :: Handler Html
 getHomeR = defaultLayout $ do
-     sess <- lookupSession "_ID"
-     [whamlet|
-         <h1> _{}
-         <h2> _{MsgBye}
-         <button> _{Login} </button>
-         $maybe _ <- sess
-             <form action=@{LogoutR} method=post>
-                 <input type="submit" value="Logout">
-     |]
-     
-getPerfilR ::Handler Html
-getPerfilR = defaultLayout $ do
-
-toWidget [lucius|
-    h1{
-        color:red;
-        size:20
-    }
-    |]
-    [whamlet|
-        <h1> 
-        <ul>
-            <li> <a href=@{LoginR}> Login
-            <li> <a href=@{ListInvR}> Inventario
-            <li> <a href=@{ListPessR}> Clientes
-    |]
-
-getPerfilR ::Handler Html
-getPerfilR = defaultLayout $ do
-
+    sessao <- lookupSession "_ID"
     toWidget [lucius|
-    h1{
-        color:red;
-    }
+        ul li {
+            display: inline;
+        }
     |]
     [whamlet|
-        <h1> 
+        <h1> Sistema de Transacoes! 
         <ul>
-            <li> <a href=@{PessR}> Cadastrar novos clientes
-            <li> <a href=@{ListInvR}> Inventario
-            <li> <a href=@{ListPessR}> Clientes
+            <li> <a href=@{PesR}>Cadastro de clientes
+            <li> <a href=@{InvR}>Cadastrar itens
+            <li> <a href=@{ListPessR}>Listar clientes
+            <li> <a href=@{ListInvR}>Inventario
+            <li> <a href=@{RelatorioR}>Transacoes
+            $maybe sess <- sessao
+                <form method=post action=@{LogoutR}>
+                    <input type="submit" value="Logout">
+            
     |]

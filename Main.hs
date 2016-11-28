@@ -2,13 +2,11 @@
              TemplateHaskell #-}
 
 module Main where
+
 import Foundation
 import Application
 import Yesod
-import Yesod.Static
-import Control.Applicative
 import Control.Monad.Logger (runStdoutLoggingT)
-import Data.Text
 import Database.Persist.Postgresql
 
 connStr :: ConnectionString

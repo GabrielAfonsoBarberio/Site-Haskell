@@ -8,9 +8,11 @@ executable          site
   main-is:          Main.hs
   other-modules:    Foundation,
                     Application,
-                    Handlers.Pessoa,
-                    Handlers.Inventario,
-                    Handlers.Login
+                    Handler.Funcionario,
+                    Handler.Relatorio,
+                    Handler.Cliente,
+                    Handler.Inventario,
+                    Handler.Login
                     
   ghc-options:      -Wall -fwarn-tabs -O2
 

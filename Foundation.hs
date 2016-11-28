@@ -15,13 +15,11 @@ data App = App {connPool :: ConnectionPool }
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 
 Inventario
-    inventarioid     Text
     nome             Text
     tipo             Text
     disponibilidade  Int
 
-Pessoa
-    pessoaid        Text
+Cliente
     nome            Text
     cpf             Text
     endereco        Text
@@ -29,18 +27,18 @@ Pessoa
     estado          Text
     telefone        Text
 
-Funcionarios
-    usuarioid    Text
+Funcionario
     nome         Text
+    posicao      Text
     email        Text
-    password     Text
+    senha        Text
 
 Relatorio
-    pessoaid        PessoaId
-    inventarioid    InventarioId
-    usuarioid       UsuarioId
-    disponibilidade Int
-    UniquePesInv    pessoaid inventarioid usuarioid
+    clienteid       ClienteId
+    itemid          ItemId
+    funcionarioid   FuncionarioId
+    concluido       Int
+    UniqueRelato    clienteid itemid funcionarioid
     deriving Show
     
 |]

@@ -1,21 +1,18 @@
 {-# LANGUAGE OverloadedStrings, QuasiQuotes,
              TemplateHaskell #-}
              
-module Handlers.Inventario where
-import Yesod
+module Handler.Inventario where
+
 import Foundation
-import Control.Monad.Logger (runStdoutLoggingT)
-import Control.Applicative
-import Data.Text
-import Text.Lucius
+import Yesod
 import Database.Persist.Postgresql
-import Database.Persist
+import Data.Text
 
 formInv :: Form Inventario
 formInv = renderDivs $ Inventario
     <$> areq textField "Nome" Nothing
     <*> areq textField "Tipo" Nothing
-    <*> areq bool      "Disponivel" False
+    <*> areq textField "Disponivel" Nothing
 
 getInvR :: Handler Html
 getInvR = do
@@ -37,19 +34,21 @@ postInvR = do
                     |]
                 _ -> redirect HomeR
 
-postInvR :: Handler Html
-postCadastroR = do
-                ((result, _), _) <- runFormPost formPessoa
-                case result of
-                    FormSuccess pessoa -> do
-                       unicoCodigo <- runDB $ getBy $ UniqueEmail (pessoaEmail inventario)
-                       case unicoEmail of
-                           Just _ -> redirect CadastroR
-                           Nothing -> do 
-                              pid <- runDB $ insert pessoa 
-                              redirect (PessoaR pid)
-                    _ -> redirect CadastroR
-
-
 getListInvR :: Handler Html
-getListInvR = undefined
+getListInvR = do
+            item <- runDB $ selectList [] [Asc ClienteNome]
+            defaultLayout $ do
+                [whamlet|
+                     <table>
+                         <tr>
+                             <td> id
+                             <td> nome
+                             <td> tipo
+                             <td> disponibilidade
+                         $forall Entity pid item <- item
+                             <tr>
+                                 <td> #{fromSqlKey pid}
+                                 <td> #{inventarioNome item}
+                                 <td> #{inventarioTipo item}
+                                 <td> #{inventarioDisponibilidade item}
+                |]
