@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2016-11-29 02:27:01.269877 UTC
+2016-11-29 04:51:29.479822 UTC
 
 interface main@main:Handler.Inventario 8001
-  interface hash: 691ae901a6ad7f8392c54f6778830b99
-  ABI hash: fbc31985e7a1e9d89d7d6b4ff2028245
-  export-list hash: e2fc4b937e01e1d4db10f61258e01cde
-  orphan hash: 20008cb9144ac72f946b9c99b23d29b7
+  interface hash: 46f52f708c39c4d1a5981340d7e770a6
+  ABI hash: 6e4518d365c5449ab9a760b841426d7c
+  export-list hash: 3fec30f60ff246f2b824bee23660bdea
+  orphan hash: 58ec90247fded0c24a7591ba24e87ff0
   flag hash: b9b96879b99cd2bbed62939a3bf7a4c9
   sig of: Nothing
   used TH splices: True
@@ -228,18 +228,18 @@ import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  blaze-html-0.8.1.2@blaze-html-0.8.1.2-2kD96kJB6JEGow1dP8IL6C:Text.Blaze.Html a616e69638e5c542aa4042a4609214fe
 import  -/  blaze-markup-0.7.1.0@blaze-markup-0.7.1.0-5a5pBG0fO8kJX4ke3K7j3D:Text.Blaze.Internal 223b48aced8c4f31c68f17d332e96f2f
-import  -/  Foundation b6c547314552954f5b094b1fe32ac043
-  exports: 62ca6f8939f8743e3f405764e62ce2af
-  Form 1e8f3f2771238345ed2c3d23fc201c1d
-  Handler 722fada0724a8181c3ba8086364b6e2f
-  HomeR 4be89384a1838e820747d6ac7e64fe10
-  InvR 047f72a0e784b621e703a61dbce65290
-  Inventario 8c9ea4421f3882fdf0dca105c1fd7861
-  Inventario 4ab9eee06efaae906f8b44e3731bce42
-  InventarioNome a68449ec2ba843235b6ae38d124e3fe2
-  inventarioDisponibilidade cd8e28400f9a7c04ee9063103154e9f7
-  inventarioNome 36794489d801a876dc7cc6c1bbb64055
-  inventarioTipo 4ddcc3483da842b70ce33fd9ecdc1fd2
+import  -/  Foundation d73dbe064a76499f5e859af7dc078ea0
+  exports: 33f84851630962b17d708bc79fcd336b
+  Form 5824a66f20035925c8e7cea314e6611d
+  Handler 122e7d37db90a78a056d5d5cb327012b
+  HomeR 245030d8324d8e7b392887824cddb2eb
+  InvR 007a5e7ff14a10c9728ebf1ce82ef407
+  Inventario b133b01c48805ffd66362d2998b129c0
+  Inventario 6419f13516f8b12ca13526b18f0ba3cd
+  InventarioNome 56394938d6dfb6c72bac4e059e7810c0
+  inventarioDisponibilidade f8e3eb053ffa26f6706c7ed45f1e780e
+  inventarioNome c881fbada55b5c33e8eb733ee2dfd087
+  inventarioTipo 1da1c305f902a7a5e1483a3c8cedf2ae
 import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Class.PersistEntity dbb3af8b40ede057aba8c075ea719bcc
 import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Class.PersistQuery c2afd8b3d1bd1452e6b77364fb33672c
 import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Class.PersistStore 425057bb4452baac78187a91fb6485d4
@@ -318,7 +318,7 @@ b4b9436883ae87dc29cc7e7f4321326d
                      @ GHC.Types.IO
                      @ site
                      Handler.Inventario.$s$fApplicativeHandlerT_$dMonad) -}
-76721c75ef618e0ac8ea131cd18fd2df
+70fefd45516234ad6aaea1ff6924cbdb
   $s$fFunctorAForm1 ::
     GHC.Base.Monad
       (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO)
@@ -545,7 +545,7 @@ a12b875646b9821e1483ae5a46b0c4f2
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Handler.Inventario.$s$fMonadBasebHandlerT -}
-6a5e9bf8f79e1ee9ee9d4ff028dce4f6
+68cc6d2f9897fdf272858481d42d08ef
   $stextField ::
     Yesod.Form.Types.Field Foundation.Handler Data.Text.Internal.Text
   {- Strictness: m,
@@ -587,7 +587,7 @@ c4f1672c96bcc7df21c6a0c9c6f1c8a1
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-dbbed4cd61d34bc679fb447577d35f7b
+80a2f84ed603258907fcba4f6e0f4d6b
   formInv :: Foundation.Form Foundation.Inventario
   {- Arity: 3, Strictness: <L,U><L,U><L,U>,
      Unfolding: InlineRule (0, True, True)
@@ -608,7 +608,7 @@ dbbed4cd61d34bc679fb447577d35f7b
                                                <GHC.Types.IO>_N <Foundation.App>_N))
                                      <GHC.Types.IO>_N
                                      <()>_N)_N)_N)) -}
-d4fdaf93dd14f2ac1dac0617e1e50b9c
+58bdfb52e9781e9565ac0db18984b0e4
   formInv1 ::
     Text.Blaze.Internal.Markup
     -> (GHC.Base.Maybe
@@ -645,45 +645,19 @@ d4fdaf93dd14f2ac1dac0617e1e50b9c
                    eta105
                    eta106
                    eta107) -}
-564b3f7b87c61f76c5ee546b8150dbf2
-  formInv10 ::
-    Yesod.Form.Types.AForm Foundation.Handler Data.Text.Internal.Text
-  {- Unfolding: (Yesod.Form.Functions.areq
-                   @ Foundation.App
-                   @ Foundation.Handler
-                   @ Data.Text.Internal.Text
-                   Foundation.$fRenderMessageAppFormMessage_$crenderMessage
-                     `cast`
-                   (Sym (Text.Shakespeare.I18N.N:RenderMessage[0]
-                             <Foundation.App>_N <Yesod.Form.Types.FormMessage>_N))
-                   (GHC.Types.Eq#
-                      @ *
-                      @ *
-                      @ Foundation.App
-                      @ Foundation.App
-                      @~ <Foundation.App>_N)
-                     `cast`
-                   (Sym (Data.Type.Equality.N:~[0]
-                             <*>_N) (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
-                                              <GHC.Types.IO>_N
-                                              <Foundation.App>_N)) <Foundation.App>_N)
-                   (Handler.Inventario.$s$fMonadHandlerHandlerT @ Foundation.App)
-                   Handler.Inventario.$stextField
-                   Handler.Inventario.formInv11
-                   (GHC.Base.Nothing @ Data.Text.Internal.Text)) -}
-8616f0535d9ffd92f4bd46248c8de16c
-  formInv11 :: Yesod.Form.Types.FieldSettings Foundation.App
+40992c95310592732e0895d841cfc5ce
+  formInv10 :: Yesod.Form.Types.FieldSettings Foundation.App
   {- Unfolding: (Yesod.Form.Types.FieldSettings
                    @ Foundation.App
-                   Handler.Inventario.formInv12
+                   Handler.Inventario.formInv11
                    (GHC.Base.Nothing
                       @ (Text.Shakespeare.I18N.SomeMessage Foundation.App))
                    (GHC.Base.Nothing @ Data.Text.Internal.Text)
                    (GHC.Base.Nothing @ Data.Text.Internal.Text)
                    (GHC.Types.[]
                       @ (Data.Text.Internal.Text, Data.Text.Internal.Text))) -}
-9528234596e0196128911b332c973bc6
-  formInv12 :: Text.Shakespeare.I18N.SomeMessage Foundation.App
+9c8799347d65468308d3fcbd7acf1987
+  formInv11 :: Text.Shakespeare.I18N.SomeMessage Foundation.App
   {- Unfolding: (Text.Shakespeare.I18N.SomeMessage
                    @ Foundation.App
                    @ Data.Text.Internal.Text
@@ -692,9 +666,9 @@ d4fdaf93dd14f2ac1dac0617e1e50b9c
                      `cast`
                    (Sym (Text.Shakespeare.I18N.N:RenderMessage[0]
                              <Foundation.App>_N <Data.Text.Internal.Text>_N))
-                   Handler.Inventario.formInv13) -}
-d89751bb24ee2a46fdd8a9e54179f152
-  formInv13 :: Data.Text.Internal.Text
+                   Handler.Inventario.formInv12) -}
+de718586844475f4217880f195eb10eb
+  formInv12 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
@@ -706,15 +680,15 @@ d89751bb24ee2a46fdd8a9e54179f152
                          Text.Shakespeare.I18N.$wouter
                            (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
                            Text.Shakespeare.I18N.$fIsStringSomeMessage1
-                           Handler.Inventario.formInv14
+                           Handler.Inventario.formInv13
                            0#
                            ipv }) of ds4 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-8630df20a33939a824fcc805a8b8224d
-  formInv14 :: [GHC.Types.Char]
+79ace09bc51683e8f37bcf295cbf02eb
+  formInv13 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Tipo"#) -}
-1222ae31159e8d2260374c324c6b06d5
-  formInv15 ::
+be957427ffab354c6db91c92cde880dc
+  formInv14 ::
     (Yesod.Core.Class.Handler.HandlerSite
        (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO),
      [Data.Text.Internal.Text])
@@ -725,7 +699,7 @@ d89751bb24ee2a46fdd8a9e54179f152
          GHC.Types.IO
          (Yesod.Form.Types.FormResult
             (Data.Text.Internal.Text
-             -> GHC.Types.Int -> Foundation.Inventario),
+             -> Data.Text.Internal.Text -> Foundation.Inventario),
           [Yesod.Form.Types.FieldView
              (Yesod.Core.Class.Handler.HandlerSite
                 (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO))]
@@ -795,16 +769,16 @@ d89751bb24ee2a46fdd8a9e54179f152
                         Yesod.Form.Types.FormMissing
                         -> Yesod.Form.Types.FormMissing
                              @ (Data.Text.Internal.Text
-                                -> GHC.Types.Int -> Foundation.Inventario)
+                                -> Data.Text.Internal.Text -> Foundation.Inventario)
                         Yesod.Form.Types.FormFailure errs
                         -> Yesod.Form.Types.FormFailure
                              @ (Data.Text.Internal.Text
-                                -> GHC.Types.Int -> Foundation.Inventario)
+                                -> Data.Text.Internal.Text -> Foundation.Inventario)
                              errs
                         Yesod.Form.Types.FormSuccess a1
                         -> Yesod.Form.Types.FormSuccess
                              @ (Data.Text.Internal.Text
-                                -> GHC.Types.Int -> Foundation.Inventario)
+                                -> Data.Text.Internal.Text -> Foundation.Inventario)
                              (Foundation.$WInventario a1) },
                       x2, y, z) } #) })
                    `cast`
@@ -814,7 +788,7 @@ d89751bb24ee2a46fdd8a9e54179f152
                        ->_R Sym (GHC.Types.N:IO[0]
                                      <(Yesod.Form.Types.FormResult
                                          (Data.Text.Internal.Text
-                                          -> GHC.Types.Int -> Foundation.Inventario),
+                                          -> Data.Text.Internal.Text -> Foundation.Inventario),
                                        [Yesod.Form.Types.FieldView
                                           (Yesod.Core.Class.Handler.HandlerSite
                                              (Yesod.Core.Types.HandlerT
@@ -829,7 +803,7 @@ d89751bb24ee2a46fdd8a9e54179f152
                                 <GHC.Types.IO>_N
                                 <(Yesod.Form.Types.FormResult
                                     (Data.Text.Internal.Text
-                                     -> GHC.Types.Int -> Foundation.Inventario),
+                                     -> Data.Text.Internal.Text -> Foundation.Inventario),
                                   [Yesod.Form.Types.FieldView
                                      (Yesod.Core.Class.Handler.HandlerSite
                                         (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO))]
@@ -838,19 +812,19 @@ d89751bb24ee2a46fdd8a9e54179f152
                                            (Yesod.Core.Types.HandlerT
                                               Foundation.App GHC.Types.IO))],
                                   Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_N)))) -}
-39c15c5ad5f4f2bbf27ff7f21533d444
-  formInv16 :: Yesod.Form.Types.FieldSettings Foundation.App
+b7cb346792e2aca694aadc9a577d229a
+  formInv15 :: Yesod.Form.Types.FieldSettings Foundation.App
   {- Unfolding: (Yesod.Form.Types.FieldSettings
                    @ Foundation.App
-                   Handler.Inventario.formInv17
+                   Handler.Inventario.formInv16
                    (GHC.Base.Nothing
                       @ (Text.Shakespeare.I18N.SomeMessage Foundation.App))
                    (GHC.Base.Nothing @ Data.Text.Internal.Text)
                    (GHC.Base.Nothing @ Data.Text.Internal.Text)
                    (GHC.Types.[]
                       @ (Data.Text.Internal.Text, Data.Text.Internal.Text))) -}
-37cfccb3fcf9f48f45687beaf1df08b8
-  formInv17 :: Text.Shakespeare.I18N.SomeMessage Foundation.App
+5915916ed6a565caccaec64ba089c658
+  formInv16 :: Text.Shakespeare.I18N.SomeMessage Foundation.App
   {- Unfolding: (Text.Shakespeare.I18N.SomeMessage
                    @ Foundation.App
                    @ Data.Text.Internal.Text
@@ -859,16 +833,16 @@ d89751bb24ee2a46fdd8a9e54179f152
                      `cast`
                    (Sym (Text.Shakespeare.I18N.N:RenderMessage[0]
                              <Foundation.App>_N <Data.Text.Internal.Text>_N))
-                   Handler.Inventario.formInv18) -}
-7900f39ff2cbdc29ecfe8e90bbba4cb2
-  formInv18 :: Data.Text.Internal.Text
+                   Handler.Inventario.formInv17) -}
+70340963d4dca4b7f517d8839d29ecd6
+  formInv17 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        Handler.Inventario.formInv19 of ds4 { (#,#) ipv ipv1 ->
+                        Handler.Inventario.formInv18 of ds4 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-7ee027a57ad06b16b17908af7d89bb79
-  formInv19 ::
+6a6d13d44545c3bed8a97f8dea9f922f
+  formInv18 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Text.Internal.Text #)
@@ -882,10 +856,13 @@ d89751bb24ee2a46fdd8a9e54179f152
                  Text.Shakespeare.I18N.$wouter
                    (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
                    Text.Shakespeare.I18N.$fIsStringSomeMessage1
-                   Handler.Inventario.formInv20
+                   Handler.Inventario.formInv19
                    0#
                    ipv }) -}
-6ce450ec562e9ba9fd9312e1dc7575b4
+655e6cab743cf4dfa7c17ea9699a52e3
+  formInv19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Nome"#) -}
+ae254a934f0db433bc8b5875d0383fc2
   formInv2 ::
     (Yesod.Core.Class.Handler.HandlerSite
        (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO),
@@ -908,23 +885,21 @@ d89751bb24ee2a46fdd8a9e54179f152
                    @ (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO)
                    (Handler.Inventario.$s$fFunctorAForm_$s$fMonadHandlerT
                       @ Foundation.App)
-                   @ GHC.Types.Int
+                   @ Data.Text.Internal.Text
                    @ Foundation.Inventario
-                   Handler.Inventario.formInv9
+                   Handler.Inventario.formInv8
                      `cast`
                    (Sym (Yesod.Form.Types.N:AForm[0]
                              <Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO>_N
-                             <GHC.Types.Int -> Foundation.Inventario>_N))
+                             <Data.Text.Internal.Text -> Foundation.Inventario>_N))
                    Handler.Inventario.formInv3) -}
-050e7b0b3c09aa3f647d4ca33c1b21f0
-  formInv20 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Nome"#) -}
-ba19af1175d5a8587961fab299ac23a7
-  formInv3 :: Yesod.Form.Types.AForm Foundation.Handler GHC.Types.Int
+4164fa3f6ce3768b07e80bb4a5e616b1
+  formInv3 ::
+    Yesod.Form.Types.AForm Foundation.Handler Data.Text.Internal.Text
   {- Unfolding: (Yesod.Form.Functions.areq
                    @ Foundation.App
                    @ Foundation.Handler
-                   @ GHC.Types.Int
+                   @ Data.Text.Internal.Text
                    Foundation.$fRenderMessageAppFormMessage_$crenderMessage
                      `cast`
                    (Sym (Text.Shakespeare.I18N.N:RenderMessage[0]
@@ -941,10 +916,10 @@ ba19af1175d5a8587961fab299ac23a7
                                               <GHC.Types.IO>_N
                                               <Foundation.App>_N)) <Foundation.App>_N)
                    (Handler.Inventario.$s$fMonadHandlerHandlerT @ Foundation.App)
-                   Handler.Inventario.formInv8
+                   Handler.Inventario.$stextField
                    Handler.Inventario.formInv4
-                   (GHC.Base.Nothing @ GHC.Types.Int)) -}
-bc35c75858b29a4c66cffbce9b86cd35
+                   (GHC.Base.Nothing @ Data.Text.Internal.Text)) -}
+3bb45bdd5cb2d056ea82362f1bc0c367
   formInv4 :: Yesod.Form.Types.FieldSettings Foundation.App
   {- Unfolding: (Yesod.Form.Types.FieldSettings
                    @ Foundation.App
@@ -955,7 +930,7 @@ bc35c75858b29a4c66cffbce9b86cd35
                    (GHC.Base.Nothing @ Data.Text.Internal.Text)
                    (GHC.Types.[]
                       @ (Data.Text.Internal.Text, Data.Text.Internal.Text))) -}
-82ce7637e1001d72fc5280fb7aac913f
+84f79e0fb35bcc72358f183eb731ecce
   formInv5 :: Text.Shakespeare.I18N.SomeMessage Foundation.App
   {- Unfolding: (Text.Shakespeare.I18N.SomeMessage
                    @ Foundation.App
@@ -986,28 +961,8 @@ c79bba500f829c7f1e2cf86746aa241a
 f7b8dd58c7431904ec3f5ae6ae4dc927
   formInv7 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Disponivel"#) -}
-3c88af25e55d96ea70dfd10309b4b6c5
-  formInv8 :: Yesod.Form.Types.Field Foundation.Handler GHC.Types.Int
-  {- Unfolding: (case Yesod.Form.Fields.$wintField
-                        @ Foundation.Handler
-                        @ GHC.Types.Int
-                        (Handler.Inventario.$s$fFunctorAForm_$s$fMonadHandlerT
-                           @ Foundation.App)
-                        GHC.Real.$fIntegralInt
-                        Foundation.$fRenderMessageAppFormMessage_$crenderMessage
-                          `cast`
-                        (Sym (Text.Shakespeare.I18N.N:RenderMessage[0]
-                                  (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
-                                       <GHC.Types.IO>_N <Foundation.App>_N)
-                                  <Yesod.Form.Types.FormMessage>_N)) of ww { (#,,#) ww1 ww2 ww3 ->
-                 Yesod.Form.Types.Field
-                   @ Foundation.Handler
-                   @ GHC.Types.Int
-                   ww1
-                   ww2
-                   ww3 }) -}
-8cdbc80de6121588354b842adf47b77c
-  formInv9 ::
+3d4489ad6fcf9af3a487f93eeb304a61
+  formInv8 ::
     (Yesod.Core.Class.Handler.HandlerSite
        (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO),
      [Data.Text.Internal.Text])
@@ -1017,7 +972,7 @@ f7b8dd58c7431904ec3f5ae6ae4dc927
          Foundation.App
          GHC.Types.IO
          (Yesod.Form.Types.FormResult
-            (GHC.Types.Int -> Foundation.Inventario),
+            (Data.Text.Internal.Text -> Foundation.Inventario),
           [Yesod.Form.Types.FieldView
              (Yesod.Core.Class.Handler.HandlerSite
                 (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO))]
@@ -1031,15 +986,41 @@ f7b8dd58c7431904ec3f5ae6ae4dc927
                    (Handler.Inventario.$s$fFunctorAForm_$s$fMonadHandlerT
                       @ Foundation.App)
                    @ Data.Text.Internal.Text
-                   @ (GHC.Types.Int -> Foundation.Inventario)
-                   Handler.Inventario.formInv15
+                   @ (Data.Text.Internal.Text -> Foundation.Inventario)
+                   Handler.Inventario.formInv14
                      `cast`
                    (Sym (Yesod.Form.Types.N:AForm[0]
                              <Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO>_N
                              <Data.Text.Internal.Text
-                              -> GHC.Types.Int -> Foundation.Inventario>_N))
-                   Handler.Inventario.formInv10) -}
-8ac95c1da24fa4692e2fb0f7fdc98cc2
+                              -> Data.Text.Internal.Text -> Foundation.Inventario>_N))
+                   Handler.Inventario.formInv9) -}
+9c6c01518af1222da1a44de45b08357b
+  formInv9 ::
+    Yesod.Form.Types.AForm Foundation.Handler Data.Text.Internal.Text
+  {- Unfolding: (Yesod.Form.Functions.areq
+                   @ Foundation.App
+                   @ Foundation.Handler
+                   @ Data.Text.Internal.Text
+                   Foundation.$fRenderMessageAppFormMessage_$crenderMessage
+                     `cast`
+                   (Sym (Text.Shakespeare.I18N.N:RenderMessage[0]
+                             <Foundation.App>_N <Yesod.Form.Types.FormMessage>_N))
+                   (GHC.Types.Eq#
+                      @ *
+                      @ *
+                      @ Foundation.App
+                      @ Foundation.App
+                      @~ <Foundation.App>_N)
+                     `cast`
+                   (Sym (Data.Type.Equality.N:~[0]
+                             <*>_N) (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
+                                              <GHC.Types.IO>_N
+                                              <Foundation.App>_N)) <Foundation.App>_N)
+                   (Handler.Inventario.$s$fMonadHandlerHandlerT @ Foundation.App)
+                   Handler.Inventario.$stextField
+                   Handler.Inventario.formInv10
+                   (GHC.Base.Nothing @ Data.Text.Internal.Text)) -}
+91bbb8e6f386d33550a764cf1818a6eb
   formInv_ds ::
     Yesod.Form.Types.AForm
       (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO)
@@ -1065,9 +1046,9 @@ f7b8dd58c7431904ec3f5ae6ae4dc927
                                               <Foundation.App>_N)) <Foundation.App>_N)
                    (Handler.Inventario.$s$fMonadHandlerHandlerT @ Foundation.App)
                    Handler.Inventario.$stextField
-                   Handler.Inventario.formInv16
+                   Handler.Inventario.formInv15
                    (GHC.Base.Nothing @ Data.Text.Internal.Text)) -}
-e24e2533dca09407845ecacc6cf98ba3
+4029dcbb5ebed4aaf67c1bf1d00b2173
   getInvR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -1079,7 +1060,7 @@ e24e2533dca09407845ecacc6cf98ba3
                       ->_R Sym (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R))
                      (Sym (Yesod.Core.Types.N:HandlerT[0]
                                <Foundation.App>_N <GHC.Types.IO>_N <Text.Blaze.Html.Html>_N))) -}
-2a72429a0a728dee73191e93978cf4e1
+85578ba216036eee7eae69689602b080
   getInvR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -1569,7 +1550,7 @@ e24e2533dca09407845ecacc6cf98ba3
                    `cast`
                  (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R)
                    ipv } }) -}
-b3b9e971f355c618aeaca9e475ebf8ed
+55a7c17661bab1471fac20adedea66f9
   getInvR10 ::
     Yesod.Core.Types.HandlerData
       Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -1586,7 +1567,7 @@ b3b9e971f355c618aeaca9e475ebf8ed
                                Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO))
                    (eta13 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  Handler.Inventario.getInvR11 eta13) -}
-ac3930b93ee0c06187a384c68e5bce7a
+5d4ba65753eeb88fa4fac61b342d55cf
   getInvR11 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -1660,7 +1641,7 @@ c657ca1e02aeb4a4a96f48cb4279002a
 5d13708f3fdb193c355bdec57c5d979e
   getInvR14 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "\" enctype=\""#) -}
-dc3901408721e9b2d01b50bb02d30afe
+8b7939f37d978cf9a4038f36d3c03a32
   getInvR15 ::
     Yesod.Core.Types.HandlerData
       Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -1677,7 +1658,7 @@ dc3901408721e9b2d01b50bb02d30afe
                                Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO))
                    (eta13 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  Handler.Inventario.getInvR16 eta13) -}
-045b12040363fd3e64546babacfd74a5
+678ec9618a12f1b350abd9abbcb8e399
   getInvR16 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -1751,7 +1732,7 @@ dc3901408721e9b2d01b50bb02d30afe
 db28ffa6c80541658590f4906ca8fdf1
   getInvR19 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "\">"#) -}
-3e8ebdc60b9dd8ae5e731c7cede4d22a
+d03f5e7eafb07e5edbce6d94c9778323
   getInvR2 ::
     Yesod.Core.Types.HandlerData
       Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -1768,7 +1749,7 @@ db28ffa6c80541658590f4906ca8fdf1
                                Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO))
                    (eta13 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  Handler.Inventario.getInvR3 eta13) -}
-79ebd7d901e0451d352e78a60a15f57f
+cf0ad5402ad079cd77e710bf1946b93a
   getInvR20 ::
     ()
     -> Yesod.Core.Types.HandlerData
@@ -1786,7 +1767,7 @@ db28ffa6c80541658590f4906ca8fdf1
                                Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO))[OneShot]
                    (eta13 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  (# eta13, Handler.Inventario.getInvR21 #)) -}
-bed263a133bba333d1f023d1886c2517
+59dc8f517531d7fab24fb75b779af370
   getInvR21 ::
     ((),
      Yesod.Core.Types.GWData
@@ -1800,7 +1781,7 @@ bed263a133bba333d1f023d1886c2517
                      (Yesod.Routes.Class.Route
                         (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetT[0]
                                   <GHC.Types.IO>_N <Foundation.App>_N)))_R)_R)) -}
-8f7244a5deb51b90ca09467a94581be6
+7a6c85c3d0dd8ba685d503b2994a0288
   getInvR22 ::
     Yesod.Core.Types.GWData (Yesod.Routes.Class.Route Foundation.App)
   {- Unfolding: (Yesod.Core.Types.GWData
@@ -1842,7 +1823,7 @@ bed263a133bba333d1f023d1886c2517
                      `cast`
                    (Sym (Yesod.Core.Types.N:Head[0]
                              <Yesod.Routes.Class.Route Foundation.App>_R))) -}
-b095cad90c0c823c521d547575f31c55
+db81ab79bed35ff12c7b8c4b3c78ef9e
   getInvR23 ::
     (Yesod.Routes.Class.Route Foundation.App
      -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
@@ -1869,7 +1850,7 @@ c9c918624c52f532276e156b48f1057a
                    "\n\
                    \<input type=\"submit\" value=\"Cadastrar\">\n\
                    \</form>\n"#) -}
-7b9cce2582c12b37f0e806bd3a9efb92
+df144a2aa1edc006e91f02888558da6e
   getInvR27 ::
     Foundation.Handler (Foundation.Widget, Yesod.Form.Types.Enctype)
   {- Unfolding: (Yesod.Form.Functions.generateFormPost
@@ -1900,7 +1881,7 @@ c9c918624c52f532276e156b48f1057a
                                                   <GHC.Types.IO>_N <Foundation.App>_N))
                                         <GHC.Types.IO>_N
                                         <()>_N)_N)_N))) -}
-430b2061d1b18f2d568752be9a48dbe7
+f034bacfa7424734eb68a6829ae775f0
   getInvR3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -1975,7 +1956,7 @@ fadc447070ad822397799ec5381c527d
   getInvR6 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "<form method=\"post\" action=\""#) -}
-224b532b22ad44725a57ed30962f5785
+5101fd3354305fa15c152ba889f332d6
   getInvR7 ::
     Yesod.Core.Types.HandlerData
       Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -2002,7 +1983,7 @@ fadc447070ad822397799ec5381c527d
                        ->_N <[(Data.Text.Internal.Text, Data.Text.Internal.Text)]
                              -> Data.Text.Internal.Text>_N))_R
                    Handler.Inventario.getInvR8) -}
-914f51a4f3b1dd4cf36f501f9d274985
+691ea626e13bad54d7931aa2c60371bf
   getInvR8 ::
     (Yesod.Routes.Class.Route Foundation.App
      -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
@@ -2112,7 +2093,7 @@ fadc447070ad822397799ec5381c527d
                                                         <Foundation.App>_N)))_R)_R)_R))
                       (Sym (Yesod.Core.Types.N:WidgetT[0]
                                 <Foundation.App>_N <GHC.Types.IO>_N <()>_N)))) -}
-9da88b0625d5255d65b87794bff91d69
+ec94337429441ea13d300ab8f9113338
   getInvR9 ::
     Yesod.Core.Types.WidgetT
       Foundation.App
@@ -2149,7 +2130,7 @@ b3afe20e95d1fd4798e65df5a38f0078
      Unfolding: (Text.Blaze.Internal.Content
                    @ ()
                    Handler.Inventario.getInvR24) -}
-1ffb50100c83d422681a8068d048b340
+27d1682a0b75258890be91b8c5b51976
   getListInvR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -2161,7 +2142,7 @@ b3afe20e95d1fd4798e65df5a38f0078
                       ->_R Sym (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R))
                      (Sym (Yesod.Core.Types.N:HandlerT[0]
                                <Foundation.App>_N <GHC.Types.IO>_N <Text.Blaze.Html.Html>_N))) -}
-96034e1b69c6be447dd859d2d9778826
+2e6e786ea86dc6e17c7f729cb2f6048a
   getListInvR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -2284,7 +2265,7 @@ b3afe20e95d1fd4798e65df5a38f0078
                    `cast`
                  (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R)
                    ipv }) -}
-980cd4689945d610737b1c78cf83ed9c
+3063daac47beb3fbb5c4def0f30057b8
   getListInvR10 ::
     (Yesod.Routes.Class.Route Foundation.App
      -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
@@ -2308,7 +2289,7 @@ b3afe20e95d1fd4798e65df5a38f0078
 dbdc799ed15048cb8073180273eea0d5
   getListInvR13 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "</table>\n"#) -}
-a84a2583b1dd1aa0d5789af83756cbd0
+aaa547493530be70811ae93911d776cc
   getListInvR14 ::
     [Database.Persist.Class.PersistEntity.Entity Foundation.Inventario]
     -> Yesod.Core.Types.HandlerData
@@ -2319,7 +2300,7 @@ a84a2583b1dd1aa0d5789af83756cbd0
            Yesod.Core.Types.GWData
              (Yesod.Routes.Class.Route Foundation.App)) #)
   {- Arity: 3, Strictness: <S,1*U><L,U><S,U> -}
-32af29f74263b64118b81c0628a0a147
+099ca65cfb9420f03955cd3816bdf13d
   getListInvR15 ::
     Database.Persist.Sql.Types.Internal.SqlBackend
     -> Yesod.Core.Types.HandlerT
@@ -2410,7 +2391,7 @@ a84a2583b1dd1aa0d5789af83756cbd0
                                 <GHC.Types.IO>_N
                                 <[Database.Persist.Class.PersistEntity.Entity
                                     Foundation.Inventario]>_N)))) -}
-de93d5e7f0c6829e529473ae20440a4c
+a9a2c2aa39bd440713b6e2a736520bbb
   getListInvR16 ::
     [Database.Persist.Class.PersistEntity.SelectOpt
        Foundation.Inventario]
@@ -2422,7 +2403,7 @@ de93d5e7f0c6829e529473ae20440a4c
                    (GHC.Types.[]
                       @ (Database.Persist.Class.PersistEntity.SelectOpt
                            Foundation.Inventario))) -}
-905e6c37eae2a72337150768b5607ea6
+1e86c5bc0f775bdd443a39a6e9a28364
   getListInvR17 ::
     Database.Persist.Class.PersistEntity.SelectOpt
       Foundation.Inventario
@@ -2433,7 +2414,7 @@ de93d5e7f0c6829e529473ae20440a4c
                    Handler.Inventario.getListInvR18
                      `cast`
                    (Sym (Foundation.D:R:EntityFieldInventariotyp0[0]) <Data.Text.Internal.Text>_N)) -}
-6901562290f5f2062958c277aa60654f
+938e23cc71b7163f5f0b987a0df20a7d
   getListInvR18 ::
     Foundation.R:EntityFieldInventariotyp Data.Text.Internal.Text
   {- HasNoCafRefs,
@@ -2453,7 +2434,7 @@ de93d5e7f0c6829e529473ae20440a4c
                    @ Data.Text.Internal.Text
                    @ Data.Text.Internal.Text
                    @~ <Data.Text.Internal.Text>_N) -}
-0aee76ac6aa03cb3633918cff9e4982f
+8c40a12ec0ce48ad505ac7f313063591
   getListInvR2 ::
     Yesod.Core.Types.HandlerData
       Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -2470,7 +2451,7 @@ de93d5e7f0c6829e529473ae20440a4c
                                Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO))
                    (eta13 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  Handler.Inventario.getListInvR3 eta13) -}
-773fa2c531981b40485dfcab2729c25d
+a3630481cdf1c9e2133464ca198db5d1
   getListInvR20 ::
     (Database.Persist.Class.PersistEntity.PersistEntity
        Foundation.Inventario,
@@ -2493,7 +2474,7 @@ c68af61f2dd561b71d6adf885fbddabb
                    @ Database.Persist.Sql.Types.Internal.SqlBackend
                    @ Database.Persist.Sql.Types.Internal.SqlBackend
                    @~ <Database.Persist.Sql.Types.Internal.SqlBackend>_N) -}
-9d056e02601f9a342cd33c6ed9d97532
+8c030724cad92ada1b63628f596a6444
   getListInvR3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -2572,7 +2553,7 @@ c35b17d54a90ae2d13a48c9c8b9d88e4
                    \<td> tipo</td>\n\
                    \<td> disponibilidade</td>\n\
                    \</tr>\n"#) -}
-79a68e64d3ae29e26c96040d21cc6a16
+aeed20040d541af5c11cb3a8d7ea5a07
   getListInvR7 ::
     ()
     -> Yesod.Core.Types.HandlerData
@@ -2590,7 +2571,7 @@ c35b17d54a90ae2d13a48c9c8b9d88e4
                                Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO))[OneShot]
                    (eta13 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  (# eta13, Handler.Inventario.getListInvR8 #)) -}
-cfdbda39de5f89cc8ff9eff628b3f8f7
+9a71bc22a2a874b68d59d4e532d546cc
   getListInvR8 ::
     ((),
      Yesod.Core.Types.GWData
@@ -2604,7 +2585,7 @@ cfdbda39de5f89cc8ff9eff628b3f8f7
                      (Yesod.Routes.Class.Route
                         (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetT[0]
                                   <GHC.Types.IO>_N <Foundation.App>_N)))_R)_R)) -}
-081764a408b08dbc82620f54b559872b
+f25b0577814995769eae14092f52be19
   getListInvR9 ::
     Yesod.Core.Types.GWData (Yesod.Routes.Class.Route Foundation.App)
   {- Unfolding: (Yesod.Core.Types.GWData
@@ -2658,7 +2639,7 @@ cfdbda39de5f89cc8ff9eff628b3f8f7
      Unfolding: (Text.Blaze.Internal.Content
                    @ ()
                    Handler.Inventario.getListInvR11) -}
-b157ef2344498dbfd939a46a008a4131
+cedc44ecab2a9ba35ad3c49107f18295
   getListInvR_m1 ::
     Control.Monad.Trans.Reader.ReaderT
       Database.Persist.Sql.Types.Internal.SqlBackend
@@ -2688,7 +2669,7 @@ b157ef2344498dbfd939a46a008a4131
                       @ (Database.Persist.Class.PersistEntity.Filter
                            Foundation.Inventario))
                    Handler.Inventario.getListInvR16) -}
-e9205547cf5e97d699757612ffd2854c
+79c461b63fd123c12e2ef2a9d403e737
   postInvR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -2700,7 +2681,7 @@ e9205547cf5e97d699757612ffd2854c
                       ->_R Sym (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R))
                      (Sym (Yesod.Core.Types.N:HandlerT[0]
                                <Foundation.App>_N <GHC.Types.IO>_N <Text.Blaze.Html.Html>_N))) -}
-39299924e8f91ca2169683a83c9ef3f5
+ed7670ee1d7935d66d551a37c7c2cd27
   postInvR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -2989,7 +2970,7 @@ e9205547cf5e97d699757612ffd2854c
                         `cast`
                       (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R)
                         ipv4 } } } } } }) -}
-1af7b644bad0bb837b2826d8fdc2ac4d
+61e7db1f15746c3c61aa74a07014529f
   postInvR10 ::
     (Yesod.Routes.Class.Route Foundation.App
      -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
@@ -3013,7 +2994,7 @@ e9205547cf5e97d699757612ffd2854c
 a30a361670b9198f377c537b6e332bca
   postInvR13 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "!"#) -}
-1fa9edcea40adcff9b044358e03fbb00
+482735fe85841320754c02564c019aec
   postInvR14 ::
     Foundation.Inventario
     -> Control.Monad.Trans.Reader.ReaderT
@@ -3034,7 +3015,7 @@ a30a361670b9198f377c537b6e332bca
                          <*>_N
                          (Sym (Foundation.D:R:PersistEntityBackendInventario[0]))
                          (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R) -}
-87f84ae308b6472387e2a382b452622e
+1b7b96d8637cb379d8b1c4b544eda94f
   postInvR15 ::
     Yesod.Core.Types.HandlerT
       Foundation.App GHC.Types.IO Text.Blaze.Html.Html
@@ -3051,7 +3032,7 @@ a30a361670b9198f377c537b6e332bca
                                   <GHC.Types.IO>_N <Foundation.App>_N)
                              <Yesod.Routes.Class.Route Foundation.App>_N))
                    Foundation.HomeR `cast` (Sym (Foundation.D:R:RouteApp0[0]))) -}
-bc648541330da2d37dbaa3f9fee8a039
+66c41e08a7b5e111c630834e3cfcf73b
   postInvR16 ::
     Foundation.Handler
       ((Yesod.Form.Types.FormResult Foundation.Inventario,
@@ -3086,7 +3067,7 @@ bc648541330da2d37dbaa3f9fee8a039
                                                   <GHC.Types.IO>_N <Foundation.App>_N))
                                         <GHC.Types.IO>_N
                                         <()>_N)_N)_N))) -}
-c61dbe3fd4b3914b42b9a7644867d49b
+9d37ff11b2f913838e8b9ea0ae85de70
   postInvR2 ::
     Yesod.Core.Types.HandlerData
       Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -3103,7 +3084,7 @@ c61dbe3fd4b3914b42b9a7644867d49b
                                Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO))
                    (eta13 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  Handler.Inventario.postInvR3 eta13) -}
-e79fe64ab1edc4c040aa6192e7803ae6
+f27a50b306f4b308f14825bb7a2301c9
   postInvR3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -3178,7 +3159,7 @@ bb0bf9cd59ff3af2d889ccce0065a33b
   postInvR6 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "Item cadastrado com sucesso "#) -}
-048c0b7aacc1379d7db0c1c21b8c40dd
+05f429a6de496d6f3dfae362982b8350
   postInvR7 ::
     ()
     -> Yesod.Core.Types.HandlerData
@@ -3196,7 +3177,7 @@ bb0bf9cd59ff3af2d889ccce0065a33b
                                Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO))[OneShot]
                    (eta13 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  (# eta13, Handler.Inventario.postInvR8 #)) -}
-7d2c0ffedde14e0c1dc6d9f26a846319
+64253cf4d5fe3e3024647bb7ffae9033
   postInvR8 ::
     ((),
      Yesod.Core.Types.GWData
@@ -3210,7 +3191,7 @@ bb0bf9cd59ff3af2d889ccce0065a33b
                      (Yesod.Routes.Class.Route
                         (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetT[0]
                                   <GHC.Types.IO>_N <Foundation.App>_N)))_R)_R)) -}
-863d0599005b4c9afc2c400d32bd80f1
+57d56af028e62f97373afdc08f8f90cd
   postInvR9 ::
     Yesod.Core.Types.GWData (Yesod.Routes.Class.Route Foundation.App)
   {- Unfolding: (Yesod.Core.Types.GWData

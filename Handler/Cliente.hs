@@ -34,7 +34,7 @@ postClienteR = do
             FormSuccess clientela -> do
                 vid <- runDB $ insert clientela
                 defaultLayout [whamlet|
-                    <h1> Cliente #{fromSqlKey vid} cadastrado!
+                    <h1> N#{fromSqlKey vid} Cliente #{clienteNome clientela} cadastrado!
                 |]
             _ -> redirect HomeR
 

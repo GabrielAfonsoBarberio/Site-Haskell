@@ -4,10 +4,12 @@
 /admin/cadastro          AdminR              GET POST
 /admin/subordinados      ListAdminR          GET
 /logout                  LogoutR                 POST
+/inventario/update       UpdateInvR          PUT
 /inventario/cadastro     InvR                GET POST    
 /inventario/listar       ListInvR            GET
 /cliente/cadastro        ClienteR            GET POST
 /cliente/listar          ListClienteR        GET
 /relatorio/cadastro      RelatorioR          GET POST
 /relatorio/listar        ListRelatorioR      GET
+/relatorio/update        UpdateRelatorioR    PUT
 /static                  StaticR             Static getStatic

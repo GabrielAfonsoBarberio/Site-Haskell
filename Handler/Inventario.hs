@@ -12,7 +12,7 @@ formInv :: Form Inventario
 formInv = renderDivs $ Inventario
     <$> areq textField "Nome" Nothing
     <*> areq textField "Tipo" Nothing
-    <*> areq intField "Disponivel" Nothing
+    <*> areq textField "Disponivel" Nothing
 
 getInvR :: Handler Html
 getInvR = do

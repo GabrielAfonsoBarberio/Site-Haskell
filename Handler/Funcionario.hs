@@ -20,3 +20,4 @@ getFuncionarioR = do
        Nothing -> defaultLayout [whamlet|
         <h1> Favor logar. 
     |]
+    

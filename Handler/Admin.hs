@@ -11,7 +11,6 @@ import Data.Text
 formFuncionario :: Form Funcionario
 formFuncionario = renderDivs $ Funcionario
     <$> areq textField "Nome" Nothing
-    <*> aopt textField "Posicao" Nothing
     <*> areq textField "Email" Nothing
     <*> areq textField "Password" Nothing
 
@@ -20,7 +19,6 @@ getAdminR = do
     (widget,enctype) <- generateFormPost formFuncionario
     defaultLayout $ do
         [whamlet|
-            <h1> Bem-vindo
             <form action=@{AdminR} method=post enctype=#{enctype}>
                 ^{widget}
                 <input type="submit" value="Cadastrar">
@@ -33,7 +31,7 @@ postAdminR = do
             FormSuccess empregado -> do
                 vid <- runDB $ insert empregado
                 defaultLayout [whamlet|
-                    <h1> Funcionario #{funcionarioNome vid} cadastrado!
+                    <h1>Funcionario #{funcionarioNome empregado} cadastrado!
                 |]
             _ -> redirect AdminR
     
@@ -46,14 +44,12 @@ getListAdminR = do
                          <tr>
                              <td> id
                              <td> nome
-                             <td> posicao
                              <td> email
                              <td> senha
                          $forall Entity pid func <- func
                              <tr>
                                  <td> #{fromSqlKey pid}
                                  <td> #{funcionarioNome func}
-                                 <td> #{funcionarioPosicao func}
                                  <td> #{funcionarioEmail func}
                                  <td> #{funcionarioSenha func}
                          

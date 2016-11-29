@@ -14,11 +14,22 @@ import Data.Text
 import Data.Monoid
 
 formRelatorio :: Form Relatorio
-formRelatorio = renderDivs $ RelatorioId 
-                    <$> areq ClienteId "Cliente" 
-                    <*> areq ItemId "Itens"
-                    <*> areq FuncionarioId "Funcionario"
-              
+formRelatorio = renderDivs $ Relatorio 
+                    <$> areq (selectField clie) "Cliente" Nothing
+                    <*> areq (selectField ite) "Itens" Nothing
+                    <*> areq (selectField funci) "Funcionario" Nothing
+                    <*> areq textField "Concluido" Nothing
+                    
+clie = do
+       entidades <- runDB $ selectList [] [Asc ClienteNome] 
+       optionsPairs $ fmap (\ent -> (clienteNome $ entityVal ent, entityKey ent)) entidades
+ite = do
+       entidades <- runDB $ selectList [] [Asc InventarioNome] 
+       optionsPairs $ fmap (\ent -> (inventarioNome $ entityVal ent, entityKey ent)) entidades
+funci = do
+       entidades <- runDB $ selectList [] [Asc FuncionarioNome] 
+       optionsPairs $ fmap (\ent -> (funcionarioNome $ entityVal ent, entityKey ent)) entidades
+
 
 getRelatorioR :: Handler Html
 getRelatorioR = do
@@ -44,6 +55,8 @@ postRelatorioR = do
                         defaultLayout [whamlet| <h1> Emprestimo #{fromSqlKey pid} criado com sucesso! |]
             _ -> redirect HomeR
             
+            
+      
 getListRelatorioR :: Handler Html
 getListRelatorioR = do
             relatorio <- runDB $ selectList [] [Asc RelatorioId]
@@ -52,11 +65,11 @@ getListRelatorioR = do
                      <table>
                          <tr>
                              <td> id
-                             <td> cliente
-                             <td> responsavel
-                             <td> nome item
-                             <td> tipo
-                         $forall Entity pid item <- item
+                             <td> clienteNome
+                             <td> funcionarioNome
+                             <td> inventarioNome
+                             <td> inventarioTipo
+                         $forall Entity pid item <- relatorio
                              <tr>
                                  <td> #{fromSqlKey pid}
                                  <td> #{clienteNome item}
@@ -64,3 +77,13 @@ getListRelatorioR = do
                                  <td> #{inventarioNome item}
                                  <td> #{inventarioTipo item}
                 |]
+                
+putUpdateRelatorioR :: [RelatorioId] -> Handler ()
+putUpdateRelatorioR pid = do
+    pers <- requireJsonBody :: Handler Relatorio
+    runDB $ get404 pid
+    runDB $ update pid [concluido =. "sim"]
+    perss <- requireJsonBody :: Handler Inventario
+    runDB $ get404 inventarioNome
+    rundDB $ update inventarioNome [inventarioDisponibilidade =. "sim"]
+    sendResponse (object [pack "resp" .= pack "Transacao completa!"])  

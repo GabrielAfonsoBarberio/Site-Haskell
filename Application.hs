@@ -47,7 +47,6 @@ getHomeR = do
             <li> <a href=@{InvR}>Cadastrar itens
             <li> <a href=@{ListClienteR}>Listar clientes
             <li> <a href=@{ListInvR}>Inventario
-            <li> <a href=@{RelatorioR}>Transacoes
             $maybe sess <- sessao
                 <form method=post action=@{LogoutR}>
                     <input type="submit" value="Logout">
@@ -57,6 +56,7 @@ getHomeR = do
         <ul>
             <li> <a href=@{ClienteR}>Cadastro de clientes
             <li> <a href=@{InvR}>Cadastrar itens
+            <li> <a href=@{ListAdminR}>Lista de funcionarios
             <li> <a href=@{ListClienteR}>Listar clientes
             <li> <a href=@{ListInvR}>Inventario
             <li> <a href=@{RelatorioR}>Transacoes

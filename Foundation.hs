@@ -17,7 +17,7 @@ share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 Inventario
     nome             Text
     tipo             Text
-    disponibilidade  Int
+    disponibilidade  Text
 
 Cliente
     nome            Text
@@ -29,7 +29,6 @@ Cliente
 
 Funcionario
     nome         Text
-    posicao      Text Maybe
     email        Text
     senha        Text
     UniqueEmail  email
@@ -38,7 +37,7 @@ Relatorio
     clienteid       ClienteId
     itemid          InventarioId
     funcionarioid   FuncionarioId
-    concluido       Int
+    concluido       Text
     UniqueRelato    clienteid itemid funcionarioid
     deriving Show
     
