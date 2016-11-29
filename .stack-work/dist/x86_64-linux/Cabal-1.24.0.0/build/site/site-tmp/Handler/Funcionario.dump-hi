@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-11-29 08:46:06.317513 UTC
+2016-11-29 08:58:48.567716 UTC
 
 interface main@main:Handler.Funcionario 8001
-  interface hash: e7884a9a4693fb9b8719441490a7b6df
-  ABI hash: bbc176bdc593ee9a891b1b1c83c56204
+  interface hash: 902ef6fbbc0bd23224eccfe7eca5b844
+  ABI hash: 08ed79b4608fd133fd5365e131d23b80
   export-list hash: 46e3ef803ab7e3a7a6167bf7c3decaae
   orphan hash: e320cc6c5b5f07b2808184ccd7a9a54c
   flag hash: b9b96879b99cd2bbed62939a3bf7a4c9
@@ -224,9 +224,9 @@ import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  base-4.9.0.0:Text.Read 9c1be14f7e5eac8b18bcb566c5763677
 import  -/  blaze-html-0.8.1.2@blaze-html-0.8.1.2-2kD96kJB6JEGow1dP8IL6C:Text.Blaze.Html a616e69638e5c542aa4042a4609214fe
 import  -/  blaze-markup-0.7.1.0@blaze-markup-0.7.1.0-5a5pBG0fO8kJX4ke3K7j3D:Text.Blaze.Internal 223b48aced8c4f31c68f17d332e96f2f
-import  -/  Foundation 24c619bd1daa65c27aa809c1f20d48c3
-  exports: 556546f4e630ba006b935cf1b16af2fe
-  Handler bc4c277a6bf08eeb24ecd00f0e8b06da
+import  -/  Foundation de42f069d94a8119f8f602e920fd32ab
+  exports: fb4e890f8a0fe4915fca493706e5f9d3
+  Handler 11da697948ce2be37067db290d7053f0
   funcionarioNome 08f2539d22b4c50c159ed68a9c42056e
 import  -/  persistent-postgresql-2.6@persistent-postgresql-2.6-GvBYHyPf2H6GQQdyjSi6nK:Database.Persist.Postgresql 1b8867174b6955b71b9a450f85dd5d9e
 import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text 6515f3179e27a91345842b6e634f584c
@@ -365,7 +365,7 @@ a7f0d8c05cef6eeb4c4353d640ae6832
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-1ca08e527bda9b9bb285bfeddbd9d59f
+537ad2534610b4a821552a853d9bbf7c
   getFuncionarioR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -373,14 +373,16 @@ a7f0d8c05cef6eeb4c4353d640ae6832
                   `cast`
                 (Trans
                      (<Yesod.Core.Types.HandlerData
-                         Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                         Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
                       ->_R Sym (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R))
                      (Sym (Yesod.Core.Types.N:HandlerT[0]
-                               <Foundation.App>_N <GHC.Types.IO>_N <Text.Blaze.Html.Html>_N))) -}
-2d3f903be6781014ff24029007a5f264
+                               <Foundation.Sitio>_N
+                               <GHC.Types.IO>_N
+                               <Text.Blaze.Html.Html>_N))) -}
+a192c27ca204f3cb1c8a3f24fcc647ae
   getFuncionarioR1 ::
     Yesod.Core.Types.HandlerData
-      Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)
+      Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, Text.Blaze.Html.Html #)
   {- Arity: 2, Strictness: <L,U><S,U> -}

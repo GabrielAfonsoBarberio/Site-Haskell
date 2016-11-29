@@ -14,6 +14,19 @@ formFuncionario = renderDivs $ Funcionario
     <*> areq textField "Email" Nothing
     <*> areq textField "Password" Nothing
 
+getFuncionarioR :: Handler Html
+getFuncionarioR = do
+    userId <- lookupSession "_ID"
+    case userId of
+       Just str -> do
+           funcionario <- runDB $ get404 (read (unpack str))
+           defaultLayout [whamlet|
+               <h1> Bem-vindo, #{funcionarioNome funcionario}. 
+           |]
+       Nothing -> defaultLayout [whamlet|
+        <h1> Favor logar. 
+    |]
+
 getAdminR :: Handler Html
 getAdminR = do
     (widget,enctype) <- generateFormPost formFuncionario

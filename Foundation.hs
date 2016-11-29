@@ -10,7 +10,7 @@ import Data.Text
 import Database.Persist.Postgresql
     ( ConnectionPool, SqlBackend, runSqlPool)
 
-data App = App {getStatic :: Static, connPool :: ConnectionPool }
+data Sitio = Sitio {getStatic :: Static, connPool :: ConnectionPool }
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 
@@ -43,12 +43,14 @@ Relatorio
     
 |]
 
-mkYesodData "App" $(parseRoutesFile "routes")
+staticFiles "static"
 
-instance Yesod App 
+mkYesodData "Sitio" $(parseRoutesFile "routes")
 
-instance YesodPersist App where
-   type YesodPersistBackend App = SqlBackend
+instance Yesod Sitio
+
+instance YesodPersist Sitio where
+   type YesodPersistBackend Sitio = SqlBackend
    runDB f = do
        master <- getYesod
        let pool = connPool master
@@ -56,5 +58,5 @@ instance YesodPersist App where
 
 type Form a = Html -> MForm Handler (FormResult a, Widget)
 
-instance RenderMessage App FormMessage where
+instance RenderMessage Sitio FormMessage where
     renderMessage _ _ = defaultFormMessage

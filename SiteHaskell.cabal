@@ -8,7 +8,6 @@ executable          site
   main-is:          Main.hs
   other-modules:    Foundation,
                     Application,
-                    Handler.Funcionario,
                     Handler.Relatorio,
                     Handler.Cliente,
                     Handler.Inventario,

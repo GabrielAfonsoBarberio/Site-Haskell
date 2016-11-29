@@ -6,7 +6,6 @@ module Handler.Relatorio where
 import Foundation
 import Yesod
 import Handler.Cliente
-import Handler.Funcionario
 import Handler.Inventario
 import Handler.Admin
 import Database.Persist.Postgresql

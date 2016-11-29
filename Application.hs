@@ -11,22 +11,17 @@ import Handler.Inventario
 import Handler.Cliente
 import Handler.Login
 import Handler.Relatorio
-import Handler.Funcionario
 import Handler.Admin
-
--- AQUI MORAM OS HANDLERS
--- import Add
--- PARA CADA NOVO GRUPO DE HANDLERS, CRIAR UM AQUIVO
--- DE HANDLER NOVO E IMPORTAR AQUI
+import Database.Persist.Postgresql
 
 
 ------------------
-mkYesodDispatch "App" resourcesApp
+mkYesodDispatch "Sitio" resourcesSitio
 
 
 getHomeR :: Handler Html
 getHomeR = do
-    sess <- lookupSession "_ID"
+    sessao <- lookupSession "_ID"
     defaultLayout $ do
         toWidget [lucius|
             ul li {
@@ -45,9 +40,10 @@ getHomeR = do
             <li> <a href=@{ListClienteR}>Listar clientes
             <li> <a href=@{ListInvR}>Inventario
             <li> <a href=@{RelatorioR}>Transacoes
+            <li> <a href=@{AdminR}>Administrador
             $maybe sess <- sessao
                 <form method=post action=@{LogoutR}>
                     <input type="submit" value="Logout">
-            $nothing
+            $maybe _ <- sessao
             <h1> Faca o <a href=@{LoginR}>Login
         |]
