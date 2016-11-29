@@ -6,6 +6,7 @@ module Main where
 import Foundation
 import Application
 import Yesod
+import Yesod.Static
 import Control.Monad.Logger (runStdoutLoggingT)
 import Database.Persist.Postgresql
 
@@ -16,4 +17,4 @@ main::IO()
 main = runStdoutLoggingT $ withPostgresqlPool connStr 10 $ \pool -> liftIO $ do 
        runSqlPersistMPool (runMigration migrateAll) pool 
        t@(Static settings) <- static "static"
-       warp 8080 (App pool)
+       warp 8080 (Sitio t pool)

@@ -1,6 +1,5 @@
 /                        HomeR               GET
 /login                   LoginR              GET POST
-/perfil/#FuncionarioId   FuncionarioR        GET
 /admin/cadastro          AdminR              GET POST
 /admin/subordinados      ListAdminR          GET
 /logout                  LogoutR                 POST

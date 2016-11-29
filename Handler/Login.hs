@@ -36,7 +36,7 @@ postLoginR = do
                    case cara of
                        Just (Entity pid funcionario) -> do
                            setSession "_ID" (pack $ show $ fromSqlKey pid)
-                           redirect (FuncionarioR pid)
+                           redirect HomeR
                        Nothing -> redirect LoginR
                 _ -> redirect HomeR
     

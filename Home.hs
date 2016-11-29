@@ -9,5 +9,5 @@ import Control.Applicative
 
 getHomeR :: Handler Html
 getHomeR = defaultLayout [whamlet|
-                <h1> <a href=@{ClienteR}>Por favor, faca o login.
+                <h1> <a href=@{LoginR}>Por favor, faca o login.
                 |]
