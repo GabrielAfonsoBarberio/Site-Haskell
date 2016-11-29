@@ -18,9 +18,10 @@ getLoginR = do
     (widget,enctype) <- generateFormPost formLogin
     defaultLayout $ do
         [whamlet|
+            
             <form action=@{LoginR} method=post enctype=#{enctype}>
                 ^{widget}
-                <input type="submit" value="Logar">
+                <input type="submit" class=btn value="Logar">
         |]
 
 postLoginR :: Handler Html

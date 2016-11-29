@@ -7,6 +7,7 @@ module Application where
 
 import Foundation
 import Yesod
+import Yesod.Static
 import Handler.Inventario
 import Handler.Cliente
 import Handler.Login
@@ -25,7 +26,7 @@ getHomeR = do
     defaultLayout $ do
         toWidget [lucius|
             ul li {
-                display: inline;
+                display: block;
             }
             a {
                 color: blue;

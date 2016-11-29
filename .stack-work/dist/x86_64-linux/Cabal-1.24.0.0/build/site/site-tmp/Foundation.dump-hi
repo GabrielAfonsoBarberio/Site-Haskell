@@ -1,20 +1,20 @@
 
 ==================== FINAL INTERFACE ====================
-2016-11-29 15:56:33.986362 UTC
+2016-11-29 21:04:14.008344 UTC
 
 interface main@main:Foundation [family instance module] 8001
-  interface hash: d79755cc7b3a742c02a5ad78224b772b
-  ABI hash: 03599e542dc4ed9579c1b02a9b07337f
-  export-list hash: ff685fbd2381d15b6ec2fbd4dcfa4a87
+  interface hash: a85b6e98a1a1f40f77d293f0bc4a8d5d
+  ABI hash: 3ef39f2a116566b80c6dd1077fdd9aac
+  export-list hash: b54e3069aeb80560a4f0ba80b74fd057
   orphan hash: 7ed70f7ed7ba5066f920b86b2b1e92c5
   flag hash: 63e82b79100e0b2c4cebe8e50c6e154b
   sig of: Nothing
   used TH splices: True
   where
 exports:
-  Foundation.label_css
   Foundation.migrateAll
   Foundation.resourcesSitio
+  Foundation.teste_css
   Foundation.Cliente{Foundation.Cliente clienteCidade clienteCpf clienteEndereco clienteEstado clienteNome clienteTelefone}
   Foundation.ClienteId
   Foundation.Form
@@ -11667,72 +11667,6 @@ c881fbada55b5c33e8eb733ee2dfd087
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Foundation.Inventario) ->
                  case ds of wild { Foundation.Inventario ds1 ds2 ds3 -> ds2 }) -}
-5e229650e86d92fbbc43558e70060aae
-  label_css :: Yesod.Static.StaticRoute
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, True)
-                Foundation.label_css1
-                  `cast`
-                (Sym (Yesod.Static.D:R:RouteStatic0[0])) -}
-92dd061b562fb01d9a3d488b96f9805d
-  label_css1 :: Yesod.Static.R:RouteStatic
-  {- Strictness: m,
-     Unfolding: (Yesod.Static.StaticRoute
-                   Foundation.label_css6
-                   Foundation.label_css2) -}
-5bb27a22b48a2f56bcef170499e9f780
-  label_css2 :: [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
-  {- Strictness: m2,
-     Unfolding: (GHC.Types.:
-                   @ (Data.Text.Internal.Text, Data.Text.Internal.Text)
-                   Foundation.label_css3
-                   (GHC.Types.[]
-                      @ (Data.Text.Internal.Text, Data.Text.Internal.Text))) -}
-2d26f4ac49e926fca18ac040db4d100b
-  label_css3 :: (Data.Text.Internal.Text, Data.Text.Internal.Text)
-  {- Strictness: m,
-     Unfolding: ((Foundation.label_css5, Foundation.label_css4)) -}
-626262ec90027047ec02423254e192e3
-  label_css4 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "Qp8_Ez87"#) -}
-6b5c8d8ed61e7b2e0a12b2abc48e3cb2
-  label_css5 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "etag"#) -}
-357a12e37d585fb9cb4c998d489edb7e
-  label_css6 :: [Data.Text.Internal.Text]
-  {- Strictness: m2,
-     Unfolding: (GHC.Types.:
-                   @ Data.Text.Internal.Text
-                   Foundation.label_css7
-                   (GHC.Types.[] @ Data.Text.Internal.Text)) -}
-a7a04f0cbeb0d347d1ed2b67a16639c3
-  label_css7 :: Data.Text.Internal.Text
-  {- Unfolding: (case GHC.Magic.runRW#
-                        @ 'GHC.Types.PtrRepLifted
-                        @ Data.Text.Internal.Text
-                        Foundation.label_css8 of ds1 { (#,#) ipv ipv1 ->
-                 ipv1 }) -}
-e7f57aa140bef540abf32ae6abf11b2b
-  label_css8 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Foundation.$wouter20
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Foundation.$fPersistFieldCliente13
-                   Foundation.label_css9
-                   0#
-                   ipv }) -}
-5a52ef801c8306892faa31f55c9dd825
-  label_css9 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "label.css"#) -}
 51121686654caa07d056e7b647376ea9
   migrateAll :: Database.Persist.Sql.Types.Migration
   {- Arity: 2,
@@ -12368,6 +12302,72 @@ a6077df671cc9c5443c79865bf4ac7b6
                    @ (Yesod.Routes.TH.Types.ResourceTree GHC.Base.String)
                    Foundation.resourcesSitio31
                    Foundation.resourcesSitio10) -}
+fc45f11d23d654744799e53980de4c48
+  teste_css :: Yesod.Static.StaticRoute
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Foundation.teste_css1
+                  `cast`
+                (Sym (Yesod.Static.D:R:RouteStatic0[0])) -}
+1c1195032d3fffcc863fc1f76bc76b74
+  teste_css1 :: Yesod.Static.R:RouteStatic
+  {- Strictness: m,
+     Unfolding: (Yesod.Static.StaticRoute
+                   Foundation.teste_css6
+                   Foundation.teste_css2) -}
+a40d53bd6678679aab132392fe8be5e5
+  teste_css2 :: [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Data.Text.Internal.Text, Data.Text.Internal.Text)
+                   Foundation.teste_css3
+                   (GHC.Types.[]
+                      @ (Data.Text.Internal.Text, Data.Text.Internal.Text))) -}
+9cbeb8a2af1d82046436fdce00401297
+  teste_css3 :: (Data.Text.Internal.Text, Data.Text.Internal.Text)
+  {- Strictness: m,
+     Unfolding: ((Foundation.teste_css5, Foundation.teste_css4)) -}
+5c4dc3d409864e5075c48a2f21108cb3
+  teste_css4 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "1B2M2Y8A"#) -}
+744930aa1b9be6a18fa47a099811a3e3
+  teste_css5 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "etag"#) -}
+850e2d21739b2c23a3aa0a09758b9162
+  teste_css6 :: [Data.Text.Internal.Text]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.Text.Internal.Text
+                   Foundation.teste_css7
+                   (GHC.Types.[] @ Data.Text.Internal.Text)) -}
+41481490798d2864130433893854045b
+  teste_css7 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        Foundation.teste_css8 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+29c10b481f9801203c9964b15410b499
+  teste_css8 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Foundation.$wouter20
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Foundation.$fPersistFieldCliente13
+                   Foundation.teste_css9
+                   0#
+                   ipv }) -}
+c59a9a8bbafac9daa22f31bc816d9acd
+  teste_css9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "teste.css"#) -}
 8b0aeeb27239a39ff8baaa7f64a4edce
   unClienteKey ::
     Database.Persist.Class.PersistEntity.Key Foundation.Cliente

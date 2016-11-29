@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2016-11-29 16:08:03.555665 UTC
+2016-11-29 21:04:26.104713 UTC
 
 interface main@main:Application [orphan module] 8001
-  interface hash: c98d982057ffc53a22103b01bc40768e
+  interface hash: 97bdb761534d869f0f0e3bc698b53154
   ABI hash: 632505fb7a53705819c5e4a3838b7147
   export-list hash: 0629ffe25e9207080a0970a422b955bd
   orphan hash: 73d51ebad5f5028beb0936758104a67f
@@ -226,8 +226,8 @@ import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  blaze-html-0.8.1.2@blaze-html-0.8.1.2-2kD96kJB6JEGow1dP8IL6C:Text.Blaze.Html a616e69638e5c542aa4042a4609214fe
 import  -/  blaze-markup-0.7.1.0@blaze-markup-0.7.1.0-5a5pBG0fO8kJX4ke3K7j3D:Text.Blaze.Internal 223b48aced8c4f31c68f17d332e96f2f
-import  -/  Foundation 03599e542dc4ed9579c1b02a9b07337f
-  exports: ff685fbd2381d15b6ec2fbd4dcfa4a87
+import  -/  Foundation 3ef39f2a116566b80c6dd1077fdd9aac
+  exports: b54e3069aeb80560a4f0ba80b74fd057
   AdminR 2bf800f8b19531a898c39b2a5147ef3d
   ClienteR 60e04bff70cd31673e51a2ec4a025dbc
   Handler aa03133617c2300e0c6ed9b3c3f3f1d0
@@ -259,9 +259,9 @@ import  -/  Handler.Inventario 2dfae8d014775de8c7020b5a17bff0b1
   getInvR fafca97ebfd2509872079293be2cc330
   getListInvR 176d3afdf3bd1cb08c85900b68c82b14
   postInvR d5b8f9504ce393a054d56ef637072c98
-import  -/  Handler.Login e2598f51e4a67460efebb2f032a8a161
+import  -/  Handler.Login da293f561041d879a8e2d1e77ebabbb2
   exports: 72684b0e61a993eb3786cacfa9dbad27
-  getLoginR a2db49441b9ed61673ea405e1b7a77fd
+  getLoginR a3ecadb36a51141cd3a94d6313a79c24
   postLoginR dba385473ff21d1647c77005166b6ffe
   postLogoutR 02093b49f49b6c6ecc09e05b7ca22354
 import  -/  Handler.Relatorio b0360b9fba1da9a8e1bb87b9d8d92239
@@ -283,6 +283,7 @@ import  -/  yesod-core-1.4.26@yesod-core-1.4.26-Bs4t4O0dhoG8RcNqRS5IQ1:Yesod.Cor
 import  -/  yesod-core-1.4.26@yesod-core-1.4.26-Bs4t4O0dhoG8RcNqRS5IQ1:Yesod.Core.Internal.TH e6d17668858c894a550076f3de7e14d1
 import  -/  yesod-core-1.4.26@yesod-core-1.4.26-Bs4t4O0dhoG8RcNqRS5IQ1:Yesod.Core.Types f4af841d830e6493d55daa368687d9b6
 import  -/  yesod-core-1.4.26@yesod-core-1.4.26-Bs4t4O0dhoG8RcNqRS5IQ1:Yesod.Core.Widget 6b0aef1518edca4dd696cfd211694629
+import  -/  yesod-static-1.5.1.1@yesod-static-1.5.1.1-3OXXDcQnEWB2nHnar7fIdk:Yesod.Static 26922bc51b1c19298aef8de8063a655a
 2c7fd52a2221d5ed8b5f720fe43943c4
   $fYesodDispatchSitio ::
     Yesod.Core.Class.Dispatch.YesodDispatch Foundation.Sitio

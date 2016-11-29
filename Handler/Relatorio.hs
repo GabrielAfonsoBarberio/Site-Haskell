@@ -38,6 +38,7 @@ getRelatorioR = do
             <form action=@{RelatorioR} method=post enctype=#{enctype}>
                 ^{widget}
                 <input type="submit" value="Realizar emprestimo">
+            
         |]
         
 postRelatorioR :: Handler Html

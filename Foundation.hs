@@ -8,7 +8,7 @@ import Yesod
 import Yesod.Static
 import Data.Text
 import Database.Persist.Postgresql
-    ( ConnectionPool, SqlBackend, runSqlPool)
+    ( ConnectionPool, SqlBackend, runSqlPool )
 
 data Sitio = Sitio {getStatic :: Static, connPool :: ConnectionPool }
 

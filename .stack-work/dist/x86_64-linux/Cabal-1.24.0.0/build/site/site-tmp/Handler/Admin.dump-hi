@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2016-11-29 16:07:58.448448 UTC
+2016-11-29 21:04:21.900905 UTC
 
 interface main@main:Handler.Admin 8001
-  interface hash: dc98acf7fd2204cf586f243596780fff
+  interface hash: fd001287b1b5c02e367a6fb695516722
   ABI hash: 30fbaefb4d66a10483acf5816c549355
   export-list hash: 84cbe8ae563f76392b1a9915987d0002
   orphan hash: 4b8075c6d9bf46d81fffbce723ae81cd
@@ -228,8 +228,8 @@ import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  blaze-html-0.8.1.2@blaze-html-0.8.1.2-2kD96kJB6JEGow1dP8IL6C:Text.Blaze.Html a616e69638e5c542aa4042a4609214fe
 import  -/  blaze-markup-0.7.1.0@blaze-markup-0.7.1.0-5a5pBG0fO8kJX4ke3K7j3D:Text.Blaze.Internal 223b48aced8c4f31c68f17d332e96f2f
-import  -/  Foundation 03599e542dc4ed9579c1b02a9b07337f
-  exports: ff685fbd2381d15b6ec2fbd4dcfa4a87
+import  -/  Foundation 3ef39f2a116566b80c6dd1077fdd9aac
+  exports: b54e3069aeb80560a4f0ba80b74fd057
   AdminR 2bf800f8b19531a898c39b2a5147ef3d
   Form 6e9d930124df28505e659e965c12beb6
   Funcionario 8a88ff636957c53abfd1b57d379f18b4

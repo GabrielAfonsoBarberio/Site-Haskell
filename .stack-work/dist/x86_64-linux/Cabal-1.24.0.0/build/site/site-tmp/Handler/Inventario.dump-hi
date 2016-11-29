@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2016-11-29 15:56:42.509811 UTC
+2016-11-29 21:04:18.956835 UTC
 
 interface main@main:Handler.Inventario 8001
-  interface hash: d1c323177e4f11eed8e189633515ef15
+  interface hash: 9f8f939efedc35286b4894064091d44c
   ABI hash: 2dfae8d014775de8c7020b5a17bff0b1
   export-list hash: efd4acab8cd9be44d7f8cd7ac9bfaccb
   orphan hash: 60cf37a0cdf3deb90f6edff6ef6fb8fd
@@ -228,8 +228,8 @@ import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  blaze-html-0.8.1.2@blaze-html-0.8.1.2-2kD96kJB6JEGow1dP8IL6C:Text.Blaze.Html a616e69638e5c542aa4042a4609214fe
 import  -/  blaze-markup-0.7.1.0@blaze-markup-0.7.1.0-5a5pBG0fO8kJX4ke3K7j3D:Text.Blaze.Internal 223b48aced8c4f31c68f17d332e96f2f
-import  -/  Foundation 03599e542dc4ed9579c1b02a9b07337f
-  exports: ff685fbd2381d15b6ec2fbd4dcfa4a87
+import  -/  Foundation 3ef39f2a116566b80c6dd1077fdd9aac
+  exports: b54e3069aeb80560a4f0ba80b74fd057
   Form 6e9d930124df28505e659e965c12beb6
   Handler aa03133617c2300e0c6ed9b3c3f3f1d0
   HomeR 280ed3aab010aa0988b7dc077414d8ff

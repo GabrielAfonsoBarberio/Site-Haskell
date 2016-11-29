@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2016-11-29 15:56:44.638644 UTC
+2016-11-29 21:04:20.186842 UTC
 
 interface main@main:Handler.Cliente 8001
-  interface hash: 0e91a687d0b0df22ebc68237c4faafe4
+  interface hash: 0e35c37380fad3b61c88a9847b0fad63
   ABI hash: 252c9032d053da92295da07c81894889
   export-list hash: 14a52b1314bfbd9d137247f075185f87
   orphan hash: 64bf83ebbb7ebc28d9ed74db24049dbe
@@ -228,8 +228,8 @@ import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  blaze-html-0.8.1.2@blaze-html-0.8.1.2-2kD96kJB6JEGow1dP8IL6C:Text.Blaze.Html a616e69638e5c542aa4042a4609214fe
 import  -/  blaze-markup-0.7.1.0@blaze-markup-0.7.1.0-5a5pBG0fO8kJX4ke3K7j3D:Text.Blaze.Internal 223b48aced8c4f31c68f17d332e96f2f
-import  -/  Foundation 03599e542dc4ed9579c1b02a9b07337f
-  exports: ff685fbd2381d15b6ec2fbd4dcfa4a87
+import  -/  Foundation 3ef39f2a116566b80c6dd1077fdd9aac
+  exports: b54e3069aeb80560a4f0ba80b74fd057
   Cliente a4850465cb2d794526c07a084de21b64
   Cliente 8b0aeeb27239a39ff8baaa7f64a4edce
   ClienteNome ed7948c919602f4bff45d575db8896d6
