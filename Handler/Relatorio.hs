@@ -5,12 +5,19 @@ module Handler.Relatorio where
 
 import Foundation
 import Yesod
+import Handler.Cliente
+import Handler.Funcionario
+import Handler.Inventario
+import Handler.AdminR
 import Database.Persist.Postgresql
 import Data.Text
 import Data.Monoid
 
-formRelatorio :: Form [RelatorioId]
-formRelatorio = renderDivs $ areq (multiSelectField relatorioLista) "Emprestimos" Nothing
+formRelatorio :: Form Relatorio
+formRelatorio = renderDivs $ RelatorioId 
+                    <$> areq ClienteId "Cliente" 
+                    <*> areq ItemId "Itens"
+                    <*> areq FuncionarioId "Funcionario"
               
 
 getRelatorioR :: Handler Html
@@ -35,4 +42,25 @@ postRelatorioR = do
                         pid <- (return $ read $ unpack userStr) :: Handler FuncionarioId
                         sequence $ fmap (\vid -> runDB $ insert $ RelatorioId pid vid) relatorio
                         defaultLayout [whamlet| <h1> Emprestimo #{fromSqlKey pid} criado com sucesso! |]
-            _ -> redirect HomeR         
+            _ -> redirect HomeR
+            
+getListRelatorioR :: Handler Html
+getListRelatorioR = do
+            relatorio <- runDB $ selectList [] [Asc RelatorioId]
+            defaultLayout $ do
+                [whamlet|
+                     <table>
+                         <tr>
+                             <td> id
+                             <td> cliente
+                             <td> responsavel
+                             <td> nome item
+                             <td> tipo
+                         $forall Entity pid item <- item
+                             <tr>
+                                 <td> #{fromSqlKey pid}
+                                 <td> #{clienteNome item}
+                                 <td> #{funcionarioNome item}
+                                 <td> #{inventarioNome item}
+                                 <td> #{inventarioTipo item}
+                |]

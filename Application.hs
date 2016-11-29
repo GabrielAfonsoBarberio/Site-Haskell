@@ -12,6 +12,7 @@ import Handler.Cliente
 import Handler.Login
 import Handler.Relatorio
 import Handler.Funcionario
+import Handler.Admin
 
 -- AQUI MORAM OS HANDLERS
 -- import Add
@@ -25,23 +26,29 @@ mkYesodDispatch "App" resourcesApp
 
 
 getHomeR :: Handler Html
-getHomeR = defaultLayout $ do
-    sessao <- lookupSession "_ID"
-    toWidget [lucius|
-        ul li {
-            display: inline;
-        }
-    |]
-    [whamlet|
-        <h1> Sistema de Transacoes! 
+getHomeR = do
+    sess <- lookupSession "_ID"
+    defaultLayout $ do
+        toWidget [lucius|
+            ul li {
+                display: inline;
+            }
+            a {
+                color: blue;
+            }
+        |]
+        $maybe _ <- sess
+        [whamlet|
+        <h1> Bem-vindo, #{funcionarioNome funcionario}! 
         <ul>
-            <li> <a href=@{PesR}>Cadastro de clientes
+            <li> <a href=@{ClienteR}>Cadastro de clientes
             <li> <a href=@{InvR}>Cadastrar itens
-            <li> <a href=@{ListPessR}>Listar clientes
+            <li> <a href=@{ListClienteR}>Listar clientes
             <li> <a href=@{ListInvR}>Inventario
             <li> <a href=@{RelatorioR}>Transacoes
             $maybe sess <- sessao
                 <form method=post action=@{LogoutR}>
                     <input type="submit" value="Logout">
-            
-    |]
+        $nothing
+            <h1> Faca o <a href=@{LoginR}>Login
+        |]

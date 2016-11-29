@@ -6,7 +6,6 @@ module Foundation where
 
 import Yesod
 import Yesod.Static
-import Data.Bool
 import Data.Text
 import Database.Persist.Postgresql
     ( ConnectionPool, SqlBackend, runSqlPool)
@@ -30,7 +29,7 @@ Cliente
 
 Funcionario
     nome         Text
-    posicao      Text
+    posicao      Text Maybe
     email        Text
     senha        Text
     UniqueEmail  email
@@ -47,7 +46,23 @@ Relatorio
 
 mkYesodData "App" $(parseRoutesFile "routes")
 
-instance Yesod App
+instance Yesod App where
+    authRoute _ = Just LoginR
+    
+    isAuthorized LoginR _ = return Authorized
+    isAuthorized HomeR _ = return Authorized
+    isAuthorized ListAdminR _ = return Authorized
+    isAuthorized ListInvR _ = return Authorized
+    isAuthorized ListClienteR _ = return Authorized
+    isAuthorized ListRelatorioR _ = return Authorized
+    isAuthorized _ _ = estaAutenticado
+
+estaAutenticado :: Handler AuthResult
+estaAutenticado = do
+   msu <- lookupSession "_ID"
+   case msu of
+       Just _ -> return Authorized
+       Nothing -> return AuthenticationRequired
 
 instance YesodPersist App where
    type YesodPersistBackend App = SqlBackend
