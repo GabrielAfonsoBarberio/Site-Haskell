@@ -8,7 +8,7 @@ import Yesod
 import Handler.Cliente
 import Handler.Funcionario
 import Handler.Inventario
-import Handler.AdminR
+import Handler.Admin
 import Database.Persist.Postgresql
 import Data.Text
 import Data.Monoid

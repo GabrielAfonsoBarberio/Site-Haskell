@@ -31,28 +31,11 @@ postLoginR = do
                    cara <- runDB $ selectFirst [FuncionarioEmail ==. email,
                                                 FuncionarioSenha ==. password] []
                    case cara of
-                       Just (Entity pid funcionarioid "admin") -> do
-                            setSession "_ADMIN" "admin"
-                            redirect AdminR
-                       Just (Entity pid funcionarioid) -> do
+                       Just (Entity pid funcionario) -> do
                            setSession "_ID" (pack $ show $ fromSqlKey pid)
                            redirect (FuncionarioR pid)
                        Nothing -> redirect LoginR
                 _ -> redirect HomeR
-
-
-getPerfilR :: Handler Html
-getPerfilR = do
-    userId <- lookupSession "_ID"
-    case userId of
-       Just str -> do
-           funcionario <- runDB $ get404 (read (unpack str))
-           defaultLayout [whamlet|
-               <h1> Bem-vindo, #{funcionarioNome funcionario}. 
-           |]
-       Nothing -> defaultLayout [whamlet|
-        <h1> Favor logar. 
-    |]
     
 postLogoutR:: Handler Html
 postLogoutR = do

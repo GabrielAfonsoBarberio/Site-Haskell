@@ -5,7 +5,6 @@ module Handler.Cliente where
 
 import Foundation
 import Yesod
-import Handler.Funcionario
 import Database.Persist.Postgresql
 import Data.Text
 
@@ -37,7 +36,7 @@ postClienteR = do
                 defaultLayout [whamlet|
                     <h1> Cliente #{fromSqlKey vid} cadastrado!
                 |]
-            _ -> redirect FuncionarioR
+            _ -> redirect HomeR
 
 getListClienteR :: Handler Html
 getListClienteR = do

@@ -28,7 +28,7 @@ getAdminR = do
 
 postAdminR :: Handler Html
 postAdminR = do
-        ((result,_),_)<- runFormPost formCliente
+        ((result,_),_)<- runFormPost formFuncionario
         case result of
             FormSuccess empregado -> do
                 vid <- runDB $ insert empregado
