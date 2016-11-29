@@ -45,23 +45,7 @@ Relatorio
 
 mkYesodData "App" $(parseRoutesFile "routes")
 
-instance Yesod App where
-    authRoute _ = Just LoginR
-    
-    isAuthorized LoginR _ = return Authorized
-    isAuthorized HomeR _ = return Authorized
-    isAuthorized ListAdminR _ = return Authorized
-    isAuthorized ListInvR _ = return Authorized
-    isAuthorized ListClienteR _ = return Authorized
-    isAuthorized ListRelatorioR _ = return Authorized
-    isAuthorized _ _ = estaAutenticado
-
-estaAutenticado :: Handler AuthResult
-estaAutenticado = do
-   msu <- lookupSession "_ID"
-   case msu of
-       Just _ -> return Authorized
-       Nothing -> return AuthenticationRequired
+instance Yesod App 
 
 instance YesodPersist App where
    type YesodPersistBackend App = SqlBackend

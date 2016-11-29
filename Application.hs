@@ -26,7 +26,7 @@ mkYesodDispatch "App" resourcesApp
 
 getHomeR :: Handler Html
 getHomeR = do
-    sess <- lookupSession "_ADMIN"
+    sess <- lookupSession "_ID"
     defaultLayout $ do
         toWidget [lucius|
             ul li {
@@ -37,7 +37,7 @@ getHomeR = do
             }
         |]
         [whamlet|
-        <h1> Bem-vindo, #{funcionarioNome funcionario}! 
+        <h1> Bem-vindo! 
         <ul>
             <li> <a href=@{ClienteR}>Cadastro de clientes
             <li> <a href=@{InvR}>Cadastrar itens
@@ -45,7 +45,6 @@ getHomeR = do
             <li> <a href=@{ListClienteR}>Listar clientes
             <li> <a href=@{ListInvR}>Inventario
             <li> <a href=@{RelatorioR}>Transacoes
-            <li> <a href=@{UpdateRelatorioR}>Atualizar transacao
             $maybe sess <- sessao
                 <form method=post action=@{LogoutR}>
                     <input type="submit" value="Logout">
