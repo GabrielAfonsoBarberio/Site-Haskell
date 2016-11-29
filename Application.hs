@@ -45,19 +45,22 @@ getHomeR = do
                 width: 64%;
                 padding: 4%;
                 text-align: center;
+                background: white;
+                border-radius: 60%;
+                box-shadow: 0px 0px 1px 2px darkblue;
             }
         |]
         [whamlet|
         <div>
-            <h1> Bem-vindo! 
-            <ul>
-                <li> <a href=@{ClienteR}>Cadastro de clientes
-                <li> <a href=@{InvR}>Cadastrar itens
-                <li> <a href=@{ListAdminR}>Lista de funcionarios
-                <li> <a href=@{ListClienteR}>Listar clientes
-                <li> <a href=@{ListInvR}>Inventario
-                <li> <a href=@{RelatorioR}>Transacoes
-                <li> <a href=@{AdminR}>Administrador
+                <h1> Bem-vindo!
+                <ul>
+                    <li> <a href=@{ClienteR}>Cadastro de clientes
+                    <li> <a href=@{InvR}>Cadastrar itens
+                    <li> <a href=@{ListAdminR}>Lista de funcionarios
+                    <li> <a href=@{ListClienteR}>Listar clientes
+                    <li> <a href=@{ListInvR}>Inventario
+                    <li> <a href=@{RelatorioR}>Transacoes
+                    <li> <a href=@{AdminR}>Administrador
                 $maybe sess <- sessao
                     <form method=post action=@{LogoutR}>
                         <input type="submit" value="Logout">
