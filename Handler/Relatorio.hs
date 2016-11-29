@@ -43,47 +43,13 @@ getRelatorioR = do
         
 postRelatorioR :: Handler Html
 postRelatorioR = do
-        ((result,_),_)<- runFormPost formRelatorio
+        ((result,_),_) <- runFormPost formRelatorio
         case result of
             FormSuccess relatorio -> do
-                userId <- lookupSession "_ID"
-                case userId of
-                    Nothing -> redirect HomeR
-                    Just userStr -> do
-                        pid <- (return $ read $ unpack userStr) :: Handler FuncionarioId
-                        sequence $ fmap (\vid -> runDB $ insert $ RelatorioId pid vid) relatorio
+                        pid <- runDB $ insert relatorio
                         defaultLayout [whamlet| <h1> Emprestimo #{fromSqlKey pid} criado com sucesso! |]
-            _ -> redirect HomeR
-            
             
       
 getListRelatorioR :: Handler Html
-getListRelatorioR = do
-            relatorio <- runDB $ selectList [] [Asc RelatorioId]
-            defaultLayout $ do
-                [whamlet|
-                     <table>
-                         <tr>
-                             <td> id
-                             <td> clienteNome
-                             <td> funcionarioNome
-                             <td> inventarioNome
-                             <td> inventarioTipo
-                         $forall Entity pid item <- relatorio
-                             <tr>
-                                 <td> #{fromSqlKey pid}
-                                 <td> #{clienteNome item}
-                                 <td> #{funcionarioNome item}
-                                 <td> #{inventarioNome item}
-                                 <td> #{inventarioTipo item}
-                |]
-                
-putUpdateRelatorioR :: [RelatorioId] -> Handler ()
-putUpdateRelatorioR pid = do
-    pers <- requireJsonBody :: Handler Relatorio
-    runDB $ get404 pid
-    runDB $ update pid [concluido =. "sim"]
-    perss <- requireJsonBody :: Handler Inventario
-    runDB $ get404 inventarioNome
-    rundDB $ update inventarioNome [inventarioDisponibilidade =. "sim"]
-    sendResponse (object [pack "resp" .= pack "Transacao completa!"])  
+getListRelatorioR = undefined
+            

@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-11-29 04:51:32.141403 UTC
+2016-11-29 07:59:53.411803 UTC
 
 interface main@main:Handler.Funcionario 8001
-  interface hash: 93aeade2d86336634c1e3cd0f094edfe
-  ABI hash: 51da268e1ce1be37517b6587e4c65536
+  interface hash: 204df52587ac18628774d8195586f94d
+  ABI hash: 980a6588601e6458b2e4c64770134c92
   export-list hash: 46e3ef803ab7e3a7a6167bf7c3decaae
   orphan hash: e320cc6c5b5f07b2808184ccd7a9a54c
   flag hash: b9b96879b99cd2bbed62939a3bf7a4c9
@@ -224,9 +224,9 @@ import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  base-4.9.0.0:Text.Read 9c1be14f7e5eac8b18bcb566c5763677
 import  -/  blaze-html-0.8.1.2@blaze-html-0.8.1.2-2kD96kJB6JEGow1dP8IL6C:Text.Blaze.Html a616e69638e5c542aa4042a4609214fe
 import  -/  blaze-markup-0.7.1.0@blaze-markup-0.7.1.0-5a5pBG0fO8kJX4ke3K7j3D:Text.Blaze.Internal 223b48aced8c4f31c68f17d332e96f2f
-import  -/  Foundation d73dbe064a76499f5e859af7dc078ea0
-  exports: 33f84851630962b17d708bc79fcd336b
-  Handler 122e7d37db90a78a056d5d5cb327012b
+import  -/  Foundation e9c2cb0c8ea9d74b5ed836ae58fc6773
+  exports: 556546f4e630ba006b935cf1b16af2fe
+  Handler e4bb53ec99f2d7fc0ff268965aaefe2f
   funcionarioNome 08f2539d22b4c50c159ed68a9c42056e
 import  -/  persistent-postgresql-2.6@persistent-postgresql-2.6-GvBYHyPf2H6GQQdyjSi6nK:Database.Persist.Postgresql 1b8867174b6955b71b9a450f85dd5d9e
 import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text 6515f3179e27a91345842b6e634f584c
@@ -365,7 +365,7 @@ a7f0d8c05cef6eeb4c4353d640ae6832
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-ba80a63987cda2dfdcace280a93961a3
+5953af23eebcdf0ffdf477418bbc4091
   getFuncionarioR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -377,7 +377,7 @@ ba80a63987cda2dfdcace280a93961a3
                       ->_R Sym (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R))
                      (Sym (Yesod.Core.Types.N:HandlerT[0]
                                <Foundation.App>_N <GHC.Types.IO>_N <Text.Blaze.Html.Html>_N))) -}
-6ab0dae1b6b8f3296db7ec448fe29d5b
+499023f5d46bd95b0e34c321e73962aa
   getFuncionarioR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)

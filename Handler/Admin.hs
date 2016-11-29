@@ -21,7 +21,7 @@ getAdminR = do
         [whamlet|
             <form action=@{AdminR} method=post enctype=#{enctype}>
                 ^{widget}
-                <input type="submit" value="Cadastrar">
+                <input type="submit" value="Cadastrar funcionario">
         |]
 
 postAdminR :: Handler Html

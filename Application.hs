@@ -19,15 +19,14 @@ import Handler.Admin
 -- PARA CADA NOVO GRUPO DE HANDLERS, CRIAR UM AQUIVO
 -- DE HANDLER NOVO E IMPORTAR AQUI
 
-import Inventario
-import Pessoas
+
 ------------------
 mkYesodDispatch "App" resourcesApp
 
 
 getHomeR :: Handler Html
 getHomeR = do
-    sess <- lookupSession "_ID"
+    sess <- lookupSession "_ADMIN"
     defaultLayout $ do
         toWidget [lucius|
             ul li {
@@ -37,20 +36,6 @@ getHomeR = do
                 color: blue;
             }
         |]
-        $maybe "admin"
-        [whamlet|
-        <h1> Bem-vindo, Administrador! 
-        <ul>
-            <li> <a href=@{AdminR}>Cadastro de funcionarios
-            <li> <a href=@{ListAdminR}>Lista de funcionarios
-            <li> <a href=@{ClienteR}>Cadastro de clientes
-            <li> <a href=@{InvR}>Cadastrar itens
-            <li> <a href=@{ListClienteR}>Listar clientes
-            <li> <a href=@{ListInvR}>Inventario
-            $maybe sess <- sessao
-                <form method=post action=@{LogoutR}>
-                    <input type="submit" value="Logout">
-        $maybe _ <- sess
         [whamlet|
         <h1> Bem-vindo, #{funcionarioNome funcionario}! 
         <ul>
@@ -60,9 +45,10 @@ getHomeR = do
             <li> <a href=@{ListClienteR}>Listar clientes
             <li> <a href=@{ListInvR}>Inventario
             <li> <a href=@{RelatorioR}>Transacoes
+            <li> <a href=@{UpdateRelatorioR}>Atualizar transacao
             $maybe sess <- sessao
                 <form method=post action=@{LogoutR}>
                     <input type="submit" value="Logout">
-        $nothing
+            $nothing
             <h1> Faca o <a href=@{LoginR}>Login
         |]

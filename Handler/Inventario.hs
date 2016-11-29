@@ -44,11 +44,9 @@ getListInvR = do
                              <td> id
                              <td> nome
                              <td> tipo
-                             <td> disponibilidade
                          $forall Entity pid item <- item
                              <tr>
                                  <td> #{fromSqlKey pid}
                                  <td> #{inventarioNome item}
                                  <td> #{inventarioTipo item}
-                                 <td> #{inventarioDisponibilidade item}
                 |]
